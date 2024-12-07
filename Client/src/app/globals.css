@@ -5,6 +5,12 @@
   font-weight: 200;
 }
 
+body {
+  max-width: 1440px;
+  margin: auto;
+  align-items: center;
+}
+
 html,
 body {
   max-width: 1200px;
@@ -21,6 +27,13 @@ a {
 
 button,
 input,
-textarea {
+textarea,
+select,
+option {
   font-family: inherit;
+}
+
+.container {
+  width: 1188px;
+  margin: auto;
 }

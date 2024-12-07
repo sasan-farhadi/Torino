@@ -1,15 +1,21 @@
 import { yekan } from "@/utils/fonts"
 import "./globals.css";
+import Layout from "@/components/layout/Layout";
 
 export const metadata = {
-  title: "Real estate",
-  description: "Real estate consultant",
+  title: "Torino | تورینو",
+  description: "برگزار کننده بهترین تورهای داخلی و خارجی",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl">
-      <body className={yekan.className}>{children}</body>
+      <link rel="icon" href="/favicon.png" />
+      <body className={yekan.className}>
+        <Layout>
+          {children}
+        </Layout>
+      </body>
     </html>
   );
 }

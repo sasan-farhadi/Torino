@@ -1,0 +1,46 @@
+.menu {
+    display: flex;
+    width: 100%;
+    margin: 10px 10px;
+}
+
+.menu_right img {
+    margin-left: 30px;
+    width: 146px;
+    height: 44px;
+}
+
+.menu_right {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.menu_left {
+    width: 20%;
+}
+
+.menu_left img {
+    width: 24px;
+    height: 24px;
+}
+
+.menu_left button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 166px;
+    height: 44px;
+    padding: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 2px solid #28A745;
+    color: #28A745;
+}
+
+.active {
+    color: #28A745;
+}
