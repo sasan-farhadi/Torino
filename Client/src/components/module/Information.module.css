@@ -1,0 +1,79 @@
+.container {
+    width: 1188px;
+    margin: auto;
+}
+
+.information {
+    display: flex;
+    margin-top: 70px;
+    height: 251px;
+    border: 1px solid #00000040;
+    border-radius: 10px;
+}
+
+.banner_info {
+    display: flex;
+    background-color: #28A745;
+    width: 869.14px;
+    position: relative;
+    border-radius: 10px;
+    padding: 55px 50px;
+    color: #fff
+}
+
+.banner_info h1 {
+    font-weight: 800;
+}
+
+.banner_info span {
+    color: #10411B;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.banner_info p {
+    font-size: 19px;
+    margin-top: 10px;
+}
+
+.image_man {
+    width: 308px;
+    height: 225px;
+    overflow: hidden;
+    position: absolute;
+    left: 35px;
+    bottom: 0;
+}
+
+.image_man img {
+    width: 308px;
+    height: 225px;
+    object-fit: cover;
+}
+
+.phone_info {
+    width: 318.86px;
+    text-align: center;
+    align-content: center;
+}
+
+.number {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.number img {
+    width: 24px;
+    height: 24px;
+}
+
+.phone_info button {
+    width: 175px;
+    height: 41px;
+    border-radius: 9px;
+    color: #fff;
+    background-color: #10411b;
+    border: none;
+}

@@ -8,7 +8,7 @@ const TorSearch = () => {
             </div>
             <div className={styles.search}>
                 <div className={styles.select}>
-                    <Image width={1000} height={800} src="/images/location.png" alt="" />
+                    <Image width={1000} height={800} src="/images/location.png" alt="location" />
                     <select name id>
                         <option value={1} disabled selected> مبدا </option>
                         <option value={1}> شیراز </option>
@@ -16,7 +16,7 @@ const TorSearch = () => {
                     </select>
                 </div>
                 <div className={styles.select}>
-                    <Image width={1000} height={800} src="/images/global-search.png" alt="" />
+                    <Image width={1000} height={800} src="/images/global-search.png" alt="global-search" />
                     <select name id>
                         <option value={1} disabled selected> مقصد </option>
                         <option value={1}> شیراز </option>
@@ -24,7 +24,7 @@ const TorSearch = () => {
                     </select>
                 </div>
                 <div className={styles.select}>
-                    <Image width={1000} height={800} src="/images/calendar.png" alt="" />
+                    <Image width={1000} height={800} src="/images/calendar.png" alt="calendar" />
                     <span>تاریخ</span>
                     <input type="date" />
                 </div>
