@@ -1,0 +1,53 @@
+.footer {
+    display: flex;
+    width: 1188px;
+    margin: auto;
+    padding: 15px 0;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    line-height: 35px;
+    width: 20%;
+}
+
+.customer {
+    display: flex;
+    flex-direction: column;
+    line-height: 35px;
+    width: 20%;
+}
+
+
+.certificate {
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.copy {
+    padding: 8px 0;
+    border-top: 2px solid #00000033;
+    text-align: center;
+}
+
+.certificate_icon {
+    display: flex;
+    justify-content: left;
+    margin-top: 30px;
+    gap: 35px;
+}
+
+.certificate_icon img {
+    width: 71px;
+    height: 74px;
+}
+
+.contact {
+    text-align: left;
+}
+
+.contact img {
+    width: 146px;
+    height: 44px;
+}

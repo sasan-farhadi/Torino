@@ -1,7 +1,9 @@
 import Banner from "../module/Banner"
 import Card from "../module/Card"
 import Information from "../module/Information"
+import Services from "../module/Services"
 import TorSearch from "../module/TorSearch"
+import WhyTorino from "../module/WhyTorino"
 
 const HomePage = () => {
     return (
@@ -10,6 +12,8 @@ const HomePage = () => {
             <TorSearch />
             <Card />
             <Information />
+            <WhyTorino />
+            <Services />
         </div>
     )
 }

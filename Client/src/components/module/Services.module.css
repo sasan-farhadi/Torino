@@ -1,0 +1,33 @@
+.container {
+    width: 1188px;
+    margin: auto;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services {
+    display: flex;
+    align-items: center;
+}
+
+.services img {
+    width: 121.42px;
+    height: 109.03px;
+}
+
+.services h2 {
+    font-weight: 400;
+    color: #282828;
+}
+
+.services p {
+    width: 190px;
+}
+
+
+.hr {
+    border: 1px solid #00000033;
+}
