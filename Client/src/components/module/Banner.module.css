@@ -1,10 +1,39 @@
 .banner {
+    position: relative;
+}
+
+.background {
     width: 100%;
     height: 350px;
     overflow: hidden;
 }
 
-.banner img {
+.background img {
     width: 100%;
     height: 100%;
+}
+
+.airplan {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    background: transparent;
+    width: auto;
+    height: auto;
+    transform: translate(30%, 35%);
+    transition: transform 10s;
+}
+
+.banner:hover .airplan {
+    -webkit-animation: flyAway 12s forwards;
+    -moz-animation: flyAway 12s forwards;
+    -o-animation: flyAway 12s forwards;
+    animation: flyAway 12s forwards;
+}
+
+
+@keyframes flyAway {
+    to {
+        transform: translate(800%, -120%);
+    }
 }
