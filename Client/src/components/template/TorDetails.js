@@ -31,9 +31,11 @@ const TorDetails = () => {
                         </div>
                         <div className={styles.reservebtn}>
                             <p>17.500.000 <span>تومان</span></p>
-                            <button>
-                                <Link href="/tor/sale">رزرو و خرید</Link>
-                            </button>
+                            <Link href="/tor/sale">
+                                <button>
+                                    رزرو و خرید
+                                </button>
+                            </Link>
                         </div>
                     </div>
 

@@ -106,10 +106,19 @@
 .price button {
     width: 283px;
     height: 56px;
-    padding: 8px ;
+    padding: 8px;
     border-radius: 10px;
     background-color: #28A745;
     color: #fff;
     margin-top: 20px;
     font-size: 24px;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+    border: none;
+}
+
+.price button:hover {
+    background-color: #fff;
+    color: #28A745;
+    border: 2px solid #28A745;
 }
