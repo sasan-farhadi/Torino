@@ -1,0 +1,115 @@
+.container {
+    width: 100%;
+    background-color: #F3F3F3;
+    height: 557px;
+    padding: 70px 0;
+}
+
+.passenger {
+    margin: auto;
+    display: flex;
+    width: 1188px;
+}
+
+.passenger img {
+    width: 24px;
+    height: 24px;
+}
+
+.details {
+    margin: auto;
+    padding: 15px;
+    width: 865px;
+    height: 228px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #00000033;
+}
+
+.torsale {
+    margin: auto;
+    width: 307px;
+    height: 228px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #00000033;
+}
+
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.inputs input {
+    width: 262px;
+    height: 50px;
+    top: 185px;
+    left: 1028.65px;
+    padding: 8px 0px 0px 0px;
+    gap: 8px;
+    border-radius: 5px;
+    border: 1px solid #00000080;
+    padding: 0 8px 0 0;
+    margin-bottom: 14px;
+}
+
+.inputs select {
+    width: 265px;
+    height: 50px;
+    border-radius: 5px;
+    color: #00000080;
+}
+
+.inputs select option {
+    color: #00000080;
+}
+
+.titr {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.torsale {
+    padding: 10px 8px;
+}
+
+.torname {
+    display: flex;
+    justify-content: space-between;
+    height: 75px;
+    padding: 10px 0 25px 0;
+    align-items: center;
+    border-bottom: 2px dashed #00000080;
+}
+
+.price {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0 0 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price h2 {
+    color: #009ECA;
+    font-weight: 400;
+}
+
+.price span {
+    color: #282828CC;
+    font-size: .9rem;
+    font-weight: 450;
+}
+
+.price button {
+    width: 283px;
+    height: 56px;
+    padding: 8px ;
+    border-radius: 10px;
+    background-color: #28A745;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 24px;
+}

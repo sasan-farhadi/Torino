@@ -9,11 +9,11 @@ const Header = () => {
     const [show, setShow] = useState("none")
 
     return (
-        <header>
+        <header className={styles.header}>
             <div className={styles.container}>
                 <div className={styles.menu}>
                     <div className={styles.menu_right}>
-                        <Image src="/images/logo.png" alt="logo" width={800} height={1000} />
+                        <Link href="/"><Image src="/images/logo.png" alt="logo" width={800} height={1000} /></Link>
                         <Link href="/" className={styles.active}> صفحه اصلی </Link>
                         <Link href="#"> خدمات گردشگری </Link>
                         <Link href="#"> درباره ما </Link>

@@ -16,7 +16,7 @@ const TorSearch = () => {
                 <h2> <span> تورینو </span> برگزار کننده بهترین تور های داخلی و خارجی </h2>
             </div>
             <div className={styles.search} >
-                <div className={styles.origin} onMouseOver={() => setShowOrigin("block")} onMouseLeave={() => setShowOrigin("none")}>
+                <div className={styles.origin} onClick={() => setShowOrigin("block")} onMouseLeave={() => setShowOrigin("none")}>
                     <Image width={500} height={300} src="/images/location.png" alt="location" />
                     <h3 >مبدا</h3>
                     <h3 className={styles.selected}>{originValue}</h3>
@@ -26,7 +26,7 @@ const TorSearch = () => {
                 </div>
 
 
-                <div className={styles.destination} onMouseOver={() => setShowDest("block")} onMouseLeave={() => setShowDest("none")}>
+                <div className={styles.destination} onClick={() => setShowDest("block")} onMouseLeave={() => setShowDest("none")}>
                     <Image width={1000} height={800} src="/images/global-search.png" alt="global-search" />
                     <h3>مقصد</h3>
                     <h3 className={styles.selected} >{destValue}</h3>

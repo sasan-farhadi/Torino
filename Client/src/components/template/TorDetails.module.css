@@ -1,0 +1,126 @@
+.container {
+    width: 100%;
+    background-color: #F3F3F3;
+    height: 627px;
+    padding: 70px 0;
+}
+
+.details {
+    margin: auto;
+    width: 1188px;
+    height: 427px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #00000033;
+}
+
+.head {
+    display: flex;
+}
+
+.imagetor {
+    padding: 25px 25px;
+}
+
+.imagetor img {
+    width: 397px;
+    height: 265px;
+}
+
+.torname {
+    padding: 15px 0;
+    width: 100%;
+}
+
+.torname h1 {
+    font-weight: 600;
+}
+
+.infotor {
+    padding: 35px 0 0 0;
+    display: flex;
+    gap: 69px;
+    width: 100%;
+    flex-wrap: wrap;
+    color: #7D7D7D;
+    justify-content: right;
+}
+
+.infotor img {
+    margin-left: 6px;
+}
+
+.infotor div {
+    display: flex;
+}
+
+.infotor img {
+    width: 20px;
+    height: 20px;
+}
+
+.reservebtn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+    align-items: center;
+}
+
+.reservebtn p {
+    font-weight: 500;
+    color: #009ECA;
+    font-size: 1.2rem;
+}
+
+.reservebtn span {
+    color: #000;
+    font-size: .8rem;
+}
+
+.reservebtn button {
+    width: 204px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: #28A745;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-left: 30px;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+}
+
+.reservebtn button:hover {
+    background-color: #fff;
+    color: #28A745;
+    border: 2px solid #28A745;
+}
+
+.information {
+    display: flex;
+    justify-content: right;
+    padding: 0 90px;
+}
+
+.descriptions {
+    border-left: 2px solid #00000040;
+    margin-left: 25px;
+}
+
+.descriptions:last-child {
+    border: none;
+}
+
+.information img {
+    width: 20px;
+    height: 20px;
+}
+
+.descriptions p {
+    color: #444444
+}
+
+.descriptions div {
+    padding-left: 60px;
+    display: flex;
+}
