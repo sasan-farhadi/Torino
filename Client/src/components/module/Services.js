@@ -43,7 +43,6 @@ const Services = () => {
                     </div>
                 </div>
             </div>
-            <div className={styles.hr}></div>
         </div>
     )
 }

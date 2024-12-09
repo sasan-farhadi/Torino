@@ -1,12 +1,15 @@
 .container {
     width: 1188px;
     margin: auto;
-  }
+}
 
 .menu {
+    padding: 5px 0 0 0;
     display: flex;
     width: 100%;
-    margin: 10px 10px;
+    height: 55px;
+    margin: 0px 10px;
+    box-shadow: 0px 1px 1px 0px #00000029;
 }
 
 .menu_right img {
@@ -44,8 +47,66 @@
     border-radius: 8px;
     border: 2px solid #28A745;
     color: #28A745;
+    cursor: pointer;
+    transition: all ease-in .3s;
 }
+
+
+.menu_left button:hover {
+    background-color: #28A745;
+    color: #fff;
+}
+
 
 .active {
     color: #28A745;
+}
+
+.menuprofile {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.menuprofile p {
+    margin-top: 10px;
+    font-weight: 400;
+    color: #28A745;
+    font-size: 1.2rem;
+}
+
+.showprofile li {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    gap: 5px;
+    padding: 10px 15px;
+}
+
+.showprofile li:first-child {
+    background: #F4F4F4;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 40px;
+}
+
+.showprofile li:first-child div {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #D9D9D9;
+}
+
+
+.showprofile {
+    width: 246px;
+    height: 151px;
+    background-color: #ffffff;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 1000;
 }

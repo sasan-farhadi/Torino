@@ -12,6 +12,12 @@
     width: 20%;
 }
 
+
+.container {
+    width: 1188px;
+    margin: auto;
+}
+
 .customer {
     display: flex;
     flex-direction: column;
@@ -50,4 +56,8 @@
 .contact img {
     width: 146px;
     height: 44px;
+}
+
+.hr {
+    border: 1px solid #00000033;
 }

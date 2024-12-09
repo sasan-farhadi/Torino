@@ -5,6 +5,9 @@ import Link from "next/link"
 const Footer = () => {
     return (
         <>
+            <div className={styles.container}>
+                <div className={styles.hr}></div>
+            </div>
             <footer className={styles.footer}>
                 <div className={styles.about}>
                     <h2>تورینو</h2>

@@ -1,0 +1,42 @@
+.container {
+    width: 1188px;
+    margin: auto;
+    display: flex;
+}
+
+.linktohomepage {
+    width: 50%;
+    display: flex;
+    gap: 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.linktohomepage button {
+    width: 361px;
+    height: 75px;
+    top: 439px;
+    font-size: 25px;
+    font-weight: 450;
+    border: none;
+    left: 886px;
+    padding: 8px ;
+    border-radius: 16px ;
+    background-color: #D8FFE1;
+    color: #28A745;
+    
+}
+
+.linktohomepage h1 {
+    font-weight: 400;
+}
+
+.erroricon {
+    width: 50%;
+}
+
+.erroricon img {
+    width: 555px;
+    height: 555px;
+}
