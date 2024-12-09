@@ -3,11 +3,11 @@
 import styles from "@/components/layout/Header.module.css"
 import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react"
 
 const Header = () => {
-    const openHandler = () => {
-        console.log("over")
-    }
+    const [show, setShow] = useState("none")
+
     return (
         <header>
             <div className={styles.container}>
@@ -26,35 +26,36 @@ const Header = () => {
                                 <Link href="/auth/signin">ورود | ثبت نام</Link>
                             </button>) : (
                                 <>
-                                    <div className={styles.menuprofile} onMouseOver={openHandler}>
+                                    <div className={styles.menuprofile} onMouseOver={() => setShow("block")} onMouseLeave={() => setShow("none")}  >
                                         <Image alt="image" src="/images/user-icon.png" width={1000} height={800} />
                                         <p> 09179212443 </p>
                                         <Image alt="image" src="/images/arrow-down.png" width={1000} height={800} />
+                                        <div className={styles.showprofile} style={{ display: show }}>
+                                            <ul>
+                                                <li>
+                                                    <div>
+                                                        <Image alt="image" src="/images/user-icon1.png" width={1000} height={800} />
+                                                    </div>
+                                                    <p> 09179212443 </p>
+                                                </li>
+                                                <li>
+                                                    <Image alt="image" src="/images/user-icon3.png" width={1000} height={800} />
+                                                    <p> اطلاعات حساب کاربری </p>
+                                                </li>
+                                                <li>
+                                                    <Image alt="image" src="/images/logout.png" width={1000} height={800} />
+                                                    <p> خروج از حساب کاربری </p>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div className={styles.showprofile}>
-                                        <ul>
-                                            <li>
-                                                <div>
-                                                    <Image alt="image" src="/images/user-icon1.png" width={1000} height={800} />
-                                                </div>
-                                                <p> 09179212443 </p>
-                                            </li>
-                                            <li>
-                                                <Image alt="image" src="/images/user-icon3.png" width={1000} height={800} />
-                                                <p> اطلاعات حساب کاربری </p>
-                                            </li>
-                                            <li>
-                                                <Image alt="image" src="/images/logout.png" width={1000} height={800} />
-                                                <p> خروج از حساب کاربری </p>
-                                            </li>
-                                        </ul>
-                                    </div>
+
                                 </>
                             )
                         }
                     </div>
                 </div>
-            </div></header>
+            </div></header >
 
     )
 }
