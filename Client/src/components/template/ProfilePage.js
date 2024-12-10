@@ -57,7 +57,7 @@ const ProfilePage = () => {
                             </div>
                             <div>
                                 <h4>جنسیت</h4>
-                                <p>زن</p>
+                                <p>مرد</p>
                             </div>
                             <div>
                                 <h4>تاریخ تولد</h4>
