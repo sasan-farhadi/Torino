@@ -11,22 +11,30 @@
     border: 1px solid #00000033;
 }
 
-.infopersonal {
-    width: 872px;
-    height: 171px;
-    border-radius: 10px;
-    border: 1px solid #00000033;
-}
-
-.infobank {
-    width: 872px;
-    height: 171px;
-    border-radius: 10px;
-    border: 1px solid #00000033;
-}
 
 .infoaccount div:first-child {
     padding: 5px;
+}
+
+
+.account input {
+    width: 255px;
+    height: 45px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #00000080;
+}
+
+.account button {
+    width: 122px;
+    height: 45px;
+    padding: 8px;
+    border-radius: 5px ;
+    border: none;
+    background-color: #28A745;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
 }
 
 .main img {
@@ -45,20 +53,42 @@
     justify-content: space-between;
 }
 
+.infopersonal {
+    width: 872px;
+    height: 171px;
+    border-radius: 10px;
+    border: 1px solid #00000033;
+}
 .prsonal {
     display: flex;
     justify-content: space-between;
     padding: 10px 5px 0 15px;
 }
 
-
+.infoname {
+    display: flex;
+    padding: 10px 15px 0 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    line-height: 50px;
+}
 
 .infoname div h4 {
     font-weight: 400;
 }
 
+.infoname div p {
+    margin-right: 35px;
+}
+
 .infoname div {
     display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
+    width: 400px;
+}
+
+.infobank {
+    width: 872px;
+    height: 171px;
+    border-radius: 10px;
+    border: 1px solid #00000033;
 }
