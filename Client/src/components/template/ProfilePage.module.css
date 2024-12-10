@@ -1,0 +1,64 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.infoaccount {
+    width: 872px;
+    height: 115px;
+    border-radius: 10px;
+    border: 1px solid #00000033;
+}
+
+.infopersonal {
+    width: 872px;
+    height: 171px;
+    border-radius: 10px;
+    border: 1px solid #00000033;
+}
+
+.infobank {
+    width: 872px;
+    height: 171px;
+    border-radius: 10px;
+    border: 1px solid #00000033;
+}
+
+.infoaccount div:first-child {
+    padding: 5px;
+}
+
+.main img {
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+}
+
+.main span {
+    color: #009ECA;
+}
+
+.account {
+    display: flex;
+    padding: 20px 20px 0 45px;
+    justify-content: space-between;
+}
+
+.prsonal {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px 0 15px;
+}
+
+
+
+.infoname div h4 {
+    font-weight: 400;
+}
+
+.infoname div {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}

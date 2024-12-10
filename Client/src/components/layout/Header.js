@@ -40,7 +40,7 @@ const Header = () => {
                                                 </li>
                                                 <li>
                                                     <Image alt="image" src="/images/user-icon3.png" width={1000} height={800} />
-                                                    <p> اطلاعات حساب کاربری </p>
+                                                    <Link href="/profile"><p> اطلاعات حساب کاربری </p></Link>
                                                 </li>
                                                 <li>
                                                     <Image alt="image" src="/images/logout.png" width={1000} height={800} />

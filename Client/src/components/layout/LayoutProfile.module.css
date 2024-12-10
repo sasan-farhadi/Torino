@@ -11,16 +11,39 @@
 
 .aside {
     width: 284px;
-    height: 170px;
+    height: 180px;
     top: 110px;
     left: 1030px;
     border-radius: 10px;
     border: 1px solid #00000033;
 }
 
+.aside img {
+    width: 20px;
+    height: 20px;
+}
+
+.aside ul li {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    height: 59px;
+    align-items: center;
+    border-bottom: 1px solid #00000033;
+}
+
+.aside ul li:last-child{
+    border: none;
+}
+
+.active {
+    background-color: #28A74540;
+    color: #28A745;
+    border-radius: 10px;
+}
+
 .form {
     width: 872px;
-    height: 715px;
+    height: auto;
     border-radius: 10px;
-    border: 1px solid #00000033;
 }

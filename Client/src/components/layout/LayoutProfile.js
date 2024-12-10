@@ -7,16 +7,16 @@ const LayoutProfile = ({ children }) => {
             <div className={styles.main}>
                 <aside className={styles.aside}>
                     <ul>
-                        <li>
-                            <Image />
+                        <li className={styles.active}>
+                            <Image width={1000} height={800} alt="pics" src="/images/profile.png" />
                             <Link href="/profile">پروفایل</Link>
                         </li>
                         <li>
-                            <Image />
+                            <Image width={1000} height={800} alt="pics" src="/images/sun-fog.png" />
                             <Link href="/profile/mytor">تورهای من</Link>
                         </li>
                         <li>
-                            <Image />
+                            <Image width={1000} height={800} alt="pics" src="/images/convert-card.png" />
                             <Link href="/profile/transaction">تراکنش ها</Link>
                         </li>
                     </ul>
