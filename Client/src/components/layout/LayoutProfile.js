@@ -6,7 +6,6 @@ const LayoutProfile = ({ children }) => {
         <div className={styles.container}>
             <div className={styles.main}>
                 <aside className={styles.aside}>
-
                     <ul>
                         <li>
                             <Image />
