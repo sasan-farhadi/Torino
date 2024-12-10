@@ -1,7 +1,9 @@
+import MyTorPage from "@/components/template/MyTorPage"
+
 const MyTor = () => {
     return (
         <div>
-            MyTor
+            <MyTorPage />
         </div>
     )
 }

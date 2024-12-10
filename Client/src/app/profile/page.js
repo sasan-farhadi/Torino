@@ -1,10 +1,9 @@
-import LayoutProfile from "@/components/layout/LayoutProfile"
-import Layouts from "./layout"
+const { default: ProfilePage } = require("@/components/template/ProfilePage")
 
 const Profile = () => {
     return (
         <>
-            sss
+            <ProfilePage />
         </>
     )
 }
