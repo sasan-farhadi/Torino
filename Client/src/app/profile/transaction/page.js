@@ -1,7 +1,9 @@
+import TransactionPage from "@/components/template/TransactionPage"
+
 const Transaction = () => {
     return (
         <div>
-            Transaction
+            <TransactionPage />
         </div>
     )
 }

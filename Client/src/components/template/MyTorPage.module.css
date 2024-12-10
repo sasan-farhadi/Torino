@@ -1,0 +1,102 @@
+.main {
+    width: 872px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #00000033;
+    padding: 10px 20px 0 0;
+}
+
+.card {
+    width: 832px;
+    height: 168px;
+    border-radius: 10px;
+    border: 1px solid #00000033;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.main img {
+    width: 24px;
+    height: 24px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.info {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.card div {
+    display: flex;
+}
+
+.mytor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tor {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.info p {
+    padding: 1px 4px;
+    border-radius: 27px;
+    font-size: 10px;
+    background: #28A7454D;
+}
+
+.info img {
+    margin-left: 5px;
+}
+
+.tor {
+    margin-bottom: 20px;
+}
+
+.tor h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.tor h4 {
+    font-size: 14px;
+    color: #00000099;
+}
+
+.tornumber {
+    border-top: 1px solid #00000033;
+    padding: 20px 0 0 0;
+    display: flex;
+    gap: 0;
+}
+
+.tornumber h3 {
+    font-size: 14px;
+    color: #00000099;
+    margin-left: 10px;
+}
+
+.tornumber h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.tornumber span {
+    font-size: 10px;
+    color: #00000099;
+}
+
+.tornumber {
+    display: flex;
+    gap: 25px;
+}
+
+.dash {
+    border-left: 1px solid #00000033;
+}

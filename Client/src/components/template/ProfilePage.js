@@ -5,10 +5,12 @@ import Link from "next/link"
 import EmailConfirmInput from "../module/EmailConfirmInput"
 import { useState } from "react"
 import PersonalEditForm from "../module/PersonalEditForm"
+import BankEditForm from "../module/BankEditForm"
 
 const ProfilePage = () => {
     const [showEditEmail, setShowEditEmail] = useState(false)
     const [showEditPersonal, setShowEditPersonal] = useState(false)
+    const [showEditBank, setShowEditBank] = useState(false)
     return (
         <div className={styles.main}>
             {!showEditEmail ? (
@@ -68,30 +70,35 @@ const ProfilePage = () => {
             }
 
 
-            <div className={styles.infobank}>
-                <div className={styles.prsonal}>
-                    <h3>اطلاعات حساب بانکی</h3>
-                    <Link href="#">
-                        <Image src="/images/edit-2.png" width={1000} height={800} alt="edit" />
-                        <span>ویرایش اطلاعات</span>
-                    </Link>
-                </div>
-                <div className={styles.infoname}>
-                    <div>
-                        <h4>شماره شبا</h4>
-                        <p>_</p>
+            {
+                !showEditBank ? (
+                    <div className={styles.infobank}>
+                        <div className={styles.prsonal}>
+                            <h3>اطلاعات حساب بانکی</h3>
+                            <Link href="#" onClick={() => setShowEditBank(true)}>
+                                <Image src="/images/edit-2.png" width={1000} height={800} alt="edit" />
+                                <span>ویرایش اطلاعات</span>
+                            </Link>
+                        </div>
+                        <div className={styles.infoname}>
+                            <div>
+                                <h4>شماره شبا</h4>
+                                <p>_</p>
+                            </div>
+                            <div>
+                                <h4>شماره کارت</h4>
+                                <p> 6037991752468520 </p>
+                            </div>
+                            <div>
+                                <h4>شماره حساب</h4>
+                                <p>_</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h4>شماره کارت</h4>
-                        <p> 6037991752468520 </p>
-                    </div>
-                    <div>
-                        <h4>شماره حساب</h4>
-                        <p>_</p>
-                    </div>
-                </div>
-            </div>
-
+                ) : (
+                    <BankEditForm />
+                )
+            }
         </div >
     )
 }
