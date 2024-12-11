@@ -19,7 +19,7 @@ const Information = () => {
                         <h2> 021-1840 </h2>
                         <Image width={1000} height={800} src="/images/phone.png" alt="phone" />
                     </div>
-                    <div>
+                    <div className={styles.button}>
                         <button>اطلاعات بیشتر</button>
                     </div>
                 </div>
