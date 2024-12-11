@@ -124,3 +124,71 @@
 .hr {
     border: 1px solid #00000033;
 }
+
+
+@media (max-width : 390px) {
+
+
+    .container {
+        width: 390px;
+        margin: auto;
+        position: relative;
+    }
+
+    .why {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+    }
+
+    .why_tour {
+        width: 390px;
+        height: 645px;
+        margin-bottom: 0;
+    }
+
+
+    .slide_image {
+        width: 390px;
+    }
+
+    .slide_image img:nth-child(1) {
+        left: 80px;
+        width: 255px;
+        height: 284px;
+    }
+
+    .slide_image img:nth-child(2) {
+        left: 50px;
+        top: 20px;
+        width: 253px;
+        height: 247px;
+    }
+
+    .slide_image img:nth-child(3) {
+        left: 20px;
+        top: 50px;
+        width: 168px;
+        height: 198px;
+    }
+
+    .slide_image img:nth-child(4) {
+        left: 0px;
+        top: 70px;
+        width: 142px;
+        height: 162px;
+    }
+
+    .next_prev {
+        width: 390px;
+        margin: 0 0 0 110px;
+    }
+
+    .info_text {
+        display: none;
+    }
+
+    .info_why {
+        display: none;
+    }
+}

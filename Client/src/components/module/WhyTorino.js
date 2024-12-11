@@ -5,6 +5,12 @@ const WhyTorino = () => {
     return (
         <>
             <div className={styles.container}>
+                <div className={styles.why}>
+                    <div>
+                        <h1>؟</h1>
+                    </div>
+                    <h2>چرا <span>تورینو</span> ؟</h2>
+                </div>
                 <div className={styles.why_tour}>
                     <div className={styles.info_why}>
                         <div className={styles.why}>
