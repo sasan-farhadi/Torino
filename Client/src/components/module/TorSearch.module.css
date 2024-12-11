@@ -116,20 +116,20 @@
 }
 
 
-@media (max-width : 480px) {
+@media (max-width : 390px) {
     .container_fluid {
-        width: 480px;
+        width: 390px;
     }
 
     .text_top_search {
-        width: 480px;
-        font-size: .9rem;
+        width: 390px;
+        font-size: .8rem;
         margin: 15px 0px;
     }
 
     .search {
         border: none;
-        width: 480px;
+        width: 390px;
         height: 200px;
         flex-wrap: wrap;
         padding: 0 30px;
@@ -138,14 +138,14 @@
 
     .destination {
         padding: 0 30px;
-        width: 205px;
+        width: 160px;
         border: 2px solid #00000026;
         border-radius: 10px;
         height: 47px;
     }
 
     .origin {
-        width: 205px;
+        width: 160px;
         padding: 0 30px;
         border: 2px solid #00000026;
         border-radius: 10px;
@@ -161,7 +161,7 @@
     }
 
     .search .button {
-        width: 410px;
+        width: 325px;
         height: 47px;
     }
 }
