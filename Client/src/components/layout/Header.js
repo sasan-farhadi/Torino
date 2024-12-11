@@ -12,6 +12,14 @@ const Header = () => {
         <header className={styles.header}>
             <div className={styles.container}>
                 <div className={styles.menu}>
+                    <div className={styles.hambergerMenu}>
+                        <div className={styles.hamber}>
+                            <Image alt="hamberger" src="/images/Group 46.png" width={1000} height={800} />
+                        </div>
+                        <div className={styles.logout}>
+                            <Image alt="hamberger" src="/images/sign in buttom.png" width={1000} height={800} />
+                        </div>
+                    </div>
                     <div className={styles.menu_right}>
                         <Link href="/"><Image src="/images/logo.png" alt="logo" width={800} height={1000} /></Link>
                         <Link href="/" className={styles.active}> صفحه اصلی </Link>

@@ -30,6 +30,10 @@ option {
   font-family: inherit;
 }
 
+button {
+  cursor: pointer;
+}
+
 li {
   list-style: none;
 }

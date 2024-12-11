@@ -50,6 +50,13 @@
     background-color: #28A745;
     color: #fff;
     border: none;
+    transition: all ease-in-out .2s;
+}
+
+.reserve_price button:hover {
+    background-color: #fff ;
+    color: #28A745;
+    border: 2px solid #28A745;
 }
 
 .reserve_price span {
