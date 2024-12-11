@@ -61,3 +61,53 @@
 .hr {
     border: 1px solid #00000033;
 }
+
+@media (max-width : 390px) {
+    .hr {
+        border: 1px dashed #00000033;
+    }
+
+    .footer {
+        width: 390px;
+        flex-wrap: wrap;
+        padding: 15px 15px;
+    }
+
+    .about {
+        width: 180px;
+    }
+
+    .customer {
+        width: 180px;
+    }
+
+    .certificate {
+        width: 390px;
+        display: flex;
+        padding: 0 0 0 15px;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    
+    .contact {
+        width: 50%;
+        padding: 39px 0 0 0;
+    }
+    
+    .certificate_icon {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        gap: 15px;
+    }
+
+    .contact img {
+        width: 100px;
+        height: 30px;
+    }
+
+    .certificate_icon img {
+        width: 35px;
+        height: 38px;
+    }
+}
