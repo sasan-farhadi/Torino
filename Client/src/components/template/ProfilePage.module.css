@@ -16,6 +16,15 @@
     padding: 5px;
 }
 
+.account {
+    display: flex;
+}
+
+.account div {
+    width: 100%;
+    display: flex;
+    gap: 80px;
+}
 
 .account input {
     width: 255px;
@@ -29,7 +38,7 @@
     width: 122px;
     height: 45px;
     padding: 8px;
-    border-radius: 5px ;
+    border-radius: 5px;
     border: none;
     background-color: #28A745;
     font-size: 16px;
@@ -59,6 +68,7 @@
     border-radius: 10px;
     border: 1px solid #00000033;
 }
+
 .prsonal {
     display: flex;
     justify-content: space-between;
@@ -91,4 +101,32 @@
     height: 171px;
     border-radius: 10px;
     border: 1px solid #00000033;
+}
+
+
+@media (max-width : 390px) {
+    .main  {
+        align-items: center;
+        width: 390px;
+    }
+    .infoaccount {
+        width: 360px;
+        height: auto;
+        border: 1px solid #00000033;
+        padding: 10px 0 ;
+    }
+
+    .infoaccount h3 {
+        margin-right: 15px;
+    }
+
+    .account div {
+        justify-content: space-between;
+    }
+
+    .account {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
 }

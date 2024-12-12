@@ -19,16 +19,18 @@ const ProfilePage = () => {
                         <h3>اطلاعات حساب کاربری</h3>
                     </div>
                     <div className={styles.account}>
-                        <p>شماره موبایل</p>
-                        <p>09224521125</p>
-                        <p></p>
-                        <p></p>
-                        <p>ایمیل</p>
-                        <p>___</p>
-                        <Link href="#" onClick={() => setShowEditEmail(true)}>
-                            <Image src="/images/edit-2.png" width={1000} height={800} alt="edit" />
-                            <span>افزودن</span>
-                        </Link>
+                        <div>
+                            <p>شماره موبایل</p>
+                            <p>09224521125</p>
+                        </div>
+                        <div>
+                            <p>ایمیل</p>
+                            <p>___</p>
+                            <Link href="#" onClick={() => setShowEditEmail(true)}>
+                                <Image src="/images/edit-2.png" width={1000} height={800} alt="edit" />
+                                <span>افزودن</span>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             ) : (

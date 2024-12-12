@@ -75,6 +75,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    cursor: pointer;
 }
 
 
@@ -94,6 +95,7 @@
     border-radius: 10px;
     border: 1px solid #00000033;
     z-index: 1000;
+    cursor: pointer;
 }
 
 .showprofile li {
