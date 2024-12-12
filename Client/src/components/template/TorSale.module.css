@@ -122,3 +122,55 @@
     color: #28A745;
     border: 2px solid #28A745;
 }
+
+@media (max-width : 390px) {
+    .passenger {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .container {
+        width: 390px;
+        background-color: #fff;
+        height: auto;
+        padding: 0 0;
+    }
+
+    .inputs {}
+
+    .inputs input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 340px;
+        gap: 0;
+    }
+
+    .passenger {
+        margin: auto;
+        display: flex;
+        width: 390px;
+    }
+
+    .details {
+        margin: auto;
+        padding: 15px;
+        width: 370px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .inputs select {
+        width: 380px;
+    }
+
+    .torsale {
+        width: 365px;
+        margin-bottom: 30px;
+    }
+
+    .price button {
+        margin-right: 20px;
+    }
+}
