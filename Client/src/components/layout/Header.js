@@ -16,9 +16,6 @@ const Header = () => {
                         <div className={styles.hamber}>
                             <Image alt="hamberger" src="/images/Group 46.png" width={1000} height={800} />
                         </div>
-                        <div className={styles.logout}>
-                            <Image alt="hamberger" src="/images/sign in buttom.png" width={1000} height={800} />
-                        </div>
                     </div>
                     <div className={styles.menu_right}>
                         <Link href="/"><Image src="/images/logo.png" alt="logo" width={800} height={1000} /></Link>
@@ -29,12 +26,21 @@ const Header = () => {
                     </div>
                     <div className={styles.menu_left}>
                         {
-                            !true ? (<button>
-                                <Image src="/images/user-icon.png" alt="user-icon" width={800} height={1000} />
-                                <Link href="/auth/signin">ورود | ثبت نام</Link>
-                            </button>) : (
+                            !true ? (
                                 <>
-                                    <div className={styles.menuprofile} onMouseOver={() => setShow("block")} onMouseLeave={() => setShow("none")}  >
+                                    <div className={styles.signin}>
+                                        <button >
+                                            <Image src="/images/user-icon.png" alt="user-icon" width={800} height={1000} />
+                                            <Link href="/auth/signin">ورود | ثبت نام</Link>
+                                        </button>
+                                    </div>
+                                    <div className={styles.login}>
+                                        <Image alt="hamberger" src="/images/sign in buttom.png" width={1000} height={800} />
+                                    </div>
+                                </>
+                            ) : (
+                                <>
+                                    <div className={styles.menuprofile} onClick={() => setShow("block")} onMouseLeave={() => setShow("none")}  >
                                         <Image alt="image" src="/images/user-icon.png" width={1000} height={800} />
                                         <p> 09179212443 </p>
                                         <Image alt="image" src="/images/arrow-down.png" width={1000} height={800} />
@@ -57,7 +63,6 @@ const Header = () => {
                                             </ul>
                                         </div>
                                     </div>
-
                                 </>
                             )
                         }
