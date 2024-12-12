@@ -7,12 +7,14 @@ const EmailConfirmInput = () => {
                     <h3>اطلاعات حساب کاربری</h3>
                 </div>
                 <div className={styles.account}>
-                    <p>شماره موبایل</p>
-                    <p>09224521125</p>
-                    <p></p>
-                    <p></p>
-                    <input type="text" placeholder="آدرس ایمیل" />
-                    <button>تایید</button>
+                    <div>
+                        <p>شماره موبایل</p>
+                        <p>09224521125</p>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="آدرس ایمیل" />
+                        <button>تایید</button>
+                    </div>
                 </div>
             </div>
         </>

@@ -105,15 +105,16 @@
 
 
 @media (max-width : 390px) {
-    .main  {
+    .main {
         align-items: center;
         width: 390px;
     }
+
     .infoaccount {
         width: 360px;
         height: auto;
         border: 1px solid #00000033;
-        padding: 10px 0 ;
+        padding: 10px 0;
     }
 
     .infoaccount h3 {
@@ -128,5 +129,22 @@
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
+    }
+
+
+    .infopersonal {
+        width: 360px;
+        height: auto;
+        padding: 0 10px;
+    }
+
+    .infoname div {
+        justify-content: space-between;
+    }
+
+    .infobank {
+        width: 360px;
+        height: auto;
+        padding: 0 10px;
     }
 }

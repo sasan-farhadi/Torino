@@ -1,3 +1,9 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .infoaccount {
     width: 872px;
     height: 115px;
@@ -10,6 +16,15 @@
     padding: 5px;
 }
 
+.account {
+    display: flex;
+}
+
+.account div {
+    width: 100%;
+    display: flex;
+    gap: 80px;
+}
 
 .account input {
     width: 255px;
@@ -26,17 +41,9 @@
     border-radius: 5px;
     border: none;
     background-color: #28A745;
-    color: #fff;
     font-size: 16px;
+    color: #fff;
     font-weight: 400;
-    cursor: pointer;
-    transition: all ease-in-out .3s;
-}
-
-.account button:hover {
-    background-color: #fff;
-    color: #28A745;
-    border: 2px solid #28A745;
 }
 
 .main img {
@@ -51,7 +58,77 @@
 
 .account {
     display: flex;
-    align-items: center;
     padding: 20px 20px 0 45px;
     justify-content: space-between;
+}
+
+.infopersonal {
+    width: 872px;
+    height: 171px;
+    border-radius: 10px;
+    border: 1px solid #00000033;
+}
+
+.prsonal {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px 0 15px;
+}
+
+.infoname {
+    display: flex;
+    padding: 10px 15px 0 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    line-height: 50px;
+}
+
+.infoname div h4 {
+    font-weight: 400;
+}
+
+.infoname div p {
+    margin-right: 35px;
+}
+
+.infoname div {
+    display: flex;
+    width: 400px;
+}
+
+.infobank {
+    width: 872px;
+    height: 171px;
+    border-radius: 10px;
+    border: 1px solid #00000033;
+}
+
+@media (max-width : 390px) {
+
+    .main {
+        align-items: center;
+        width: 390px;
+    }
+
+    .infoaccount {
+        width: 360px;
+        height: auto;
+        border: 1px solid #00000033;
+        padding: 10px 0;
+    }
+
+    .infoaccount h3 {
+        margin-right: 15px;
+    }
+
+    .account div {
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    .account {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
 }

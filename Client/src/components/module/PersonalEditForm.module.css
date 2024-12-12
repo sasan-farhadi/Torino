@@ -81,3 +81,28 @@
     color: #fff;
     border: 2px solid rgb(194, 54, 22);
 }
+
+@media (max-width : 390px) {
+
+    .infopersonal {
+        width: 360px;
+        height: auto;
+        padding: 0 10px;
+    }
+
+    .infopersonal input {
+        width: 310px;
+    }
+
+    .infopersonal select {
+        width: 310px;
+    }
+
+    .infoname div {
+        justify-content: space-between;
+    }
+
+    .button {
+        border: none;
+    }
+}
