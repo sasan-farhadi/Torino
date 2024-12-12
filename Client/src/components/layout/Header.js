@@ -4,17 +4,21 @@ import styles from "@/components/layout/Header.module.css"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
+import HambergerMenu from "../module/HambergerMenu"
 
 const Header = () => {
     const [show, setShow] = useState("none")
-
+    const [showHamberger, setShowHamberger] = useState("none")
     return (
         <header className={styles.header}>
+            <div onClick={() => setShowHamberger("none")} style={{ display: showHamberger }}>
+                <HambergerMenu />
+            </div>
             <div className={styles.container}>
                 <div className={styles.menu}>
                     <div className={styles.hambergerMenu}>
                         <div className={styles.hamber}>
-                            <Image alt="hamberger" src="/images/Group 46.png" width={1000} height={800} />
+                            <Image alt="hamberger" src="/images/Group 46.png" width={1000} height={800} onClick={() => setShowHamberger("block")} />
                         </div>
                     </div>
                     <div className={styles.menu_right}>
@@ -68,8 +72,8 @@ const Header = () => {
                         }
                     </div>
                 </div>
-            </div></header >
-
+            </div>
+        </header >
     )
 }
 
