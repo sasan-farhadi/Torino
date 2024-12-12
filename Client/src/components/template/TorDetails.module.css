@@ -96,6 +96,38 @@
     border: 2px solid #28A745;
 }
 
+.reservebtnres button {
+    display: none;
+    width: 204px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: #28A745;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-left: 30px;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+}
+
+.reservebtnres button:hover {
+    background-color: #fff;
+    color: #28A745;
+    border: 2px solid #28A745;
+}
+
+.reservebtnres p {
+    font-weight: 500;
+    color: #009ECA;
+    font-size: 1.2rem;
+}
+
+.reservebtnres span {
+    color: #000;
+    font-size: .8rem;
+}
+
+
 .information {
     display: flex;
     justify-content: right;
@@ -123,4 +155,90 @@
 .descriptions div {
     padding-left: 60px;
     display: flex;
+}
+
+@media (max-width : 390px) {
+    .container {
+        width: 390px;
+        padding: 0;
+    }
+
+    .details {
+        width: 390px;
+        height: auto;
+        border: 0;
+        border-radius: 0;
+    }
+
+    .head {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagetor {
+        padding: 0;
+        align-items: center;
+        padding-right: 25px;
+    }
+
+    .imagetor img {
+        width: 330px;
+        height: auto;
+    }
+
+    .tor_tite {
+        width: 390px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 25px 0 45px;
+    }
+
+    .infotor {
+        padding: 35px 25px 0 0;
+        gap: 18px;
+        font-size: .8rem;
+    }
+
+    .descriptions:nth-child(-n+3) {
+        display: none;
+    }
+
+    .descriptions {
+        border: none;
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .information {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .reservebtn {
+        display: none;
+    }
+
+    .reservebtnres {
+        display: block;
+    }
+
+    .reservebtnres {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+
+    .reservebtnres button {
+        display: block;
+        width: 154px;
+        height: 42px;
+    }
+
+    .container {
+        height: auto;
+    }
 }

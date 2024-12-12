@@ -7,14 +7,14 @@ const TorDetails = () => {
         <div className={styles.container}>
             <div className={styles.details}>
                 <div className={styles.head}>
-
                     <div className={styles.imagetor}>
                         <Image src="/images/arbil1.png" width={1000} height={800} alt="torimage" />
                     </div>
-
                     <div className={styles.torname}>
-                        <h1>تور هولیر</h1>
-                        <p>5 روز و 4 شب</p>
+                        <div className={styles.tor_tite}>
+                            <h1>تور هولیر</h1>
+                            <p>5 روز و 4 شب</p>
+                        </div>
                         <div className={styles.infotor}>
                             <div>
                                 <Image src="/images/user-tick.png" width={1000} height={800} alt="toricon" />
@@ -86,6 +86,14 @@ const TorDetails = () => {
                         </div>
                         <h4>بیمه 50 هزار دیناری</h4>
                     </div>
+                </div>
+                <div className={styles.reservebtnres}>
+                    <Link href="/tor/sale">
+                        <button>
+                            رزرو و خرید
+                        </button>
+                    </Link>
+                    <p>17.500.000 <span>تومان</span></p>
                 </div>
             </div>
         </div>
