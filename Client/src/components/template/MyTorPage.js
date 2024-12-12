@@ -72,12 +72,12 @@ const MyTorPage = () => {
 
                 <div className={styles.tornumber}>
                     <div>
-                        <h3>شماره موتور</h3>
+                        <h3>شماره تور</h3>
                         <h4>102095404</h4>
                     </div>
                     <div className={styles.dash}></div>
                     <div>
-                        <h3>مبلغ پرداخت شده کرایه</h3>
+                        <h3>مبلغ پرداخت شده</h3>
                         <h4>18.000.000 <span>تومان</span></h4>
                     </div>
                 </div>

@@ -100,3 +100,53 @@
 .dash {
     border-left: 1px solid #00000033;
 }
+
+
+
+@media (max-width: 390px) {
+    .main {
+        width: 390px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        border: none;
+    }
+
+    .card {
+        width: 360px;
+        height: auto;
+        padding: 15px;
+    }
+
+    .mytor {
+        padding: 0 10px;
+    }
+
+    .info p {
+        padding: 1px 4px;
+        font-size: 5px;
+    }
+
+    .tor h3 {
+        font-size: 10px;
+        font-weight: 600;
+        margin-left: 10px;
+    }
+
+    .tor h4 {
+        font-size: 10px;
+        color: #00000099;
+    }
+
+    .tor {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .tor div {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    } 
+}

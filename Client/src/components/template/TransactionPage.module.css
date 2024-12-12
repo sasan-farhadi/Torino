@@ -24,3 +24,32 @@
     justify-content: space-between;
     padding: 20px 15px 5px 15px;
 }
+
+@media (max-width : 390px) {
+    .main {
+        width: 360px;
+        margin-right: 10px;
+    }
+
+    .main div {}
+
+    .main .head {
+        padding: 10px;
+    }
+
+    .main .head p {
+        font-weight: 200;
+    }
+
+    .main p {
+        font-size: 5px;
+    }
+
+    .head p:nth-child(3) {
+        display: none;
+    }
+
+    .list p:nth-child(3) {
+        display: none;
+    }
+}
