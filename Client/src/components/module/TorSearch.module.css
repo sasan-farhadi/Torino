@@ -164,4 +164,16 @@
         width: 325px;
         height: 47px;
     }
+
+    .select_origin {
+        width: 160px;
+        top : 50px;
+        right: 0px;
+    }
+
+    .select_destination {
+        top: 50px;
+        right: 0;
+        width: 160px;
+    }
 }

@@ -38,3 +38,10 @@
     width: 20px;
     height: 20px;
 }
+
+
+@media(max-width : 390px) {
+    .select_option {
+        width: 160px;
+    }
+}
