@@ -10,7 +10,7 @@ const NotFound = () => {
                 <button><Link href="/">بازگشت به صفحه اصلی</Link></button>
             </div>
             <div className={styles.erroricon}>
-                <Image src="/images/error404.png" width={1000} height={800} />
+                <Image alt="pics" src="/images/error404.png" width={1000} height={800} />
             </div>
         </div>
     )

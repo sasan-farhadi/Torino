@@ -13,24 +13,8 @@
     justify-content: center;
 }
 
-.linktohomepage button {
-    width: 361px;
-    height: 75px;
-    top: 439px;
-    font-size: 25px;
-    font-weight: 450;
-    border: none;
-    left: 886px;
-    padding: 8px;
-    border-radius: 16px;
-    background-color: #D8FFE1;
-    cursor: pointer;
-    color: #28A745;
-}
-
-
-.linktohomepage button:hover {
-    opacity: .7;
+.linktohomepage h2 {
+    font-size: 15px;
 }
 
 .linktohomepage h1 {
@@ -71,12 +55,6 @@
         gap: 30px;
         margin: 0;
         padding: 0;
-    }
-
-    .linktohomepage button {
-        width: 232px;
-        height: 58px;
-        font-size: 20px;
     }
 
     .linktohomepage h1 {
