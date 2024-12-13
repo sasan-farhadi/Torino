@@ -34,14 +34,13 @@ const Header = () => {
                         {
                             true ? (
                                 <>
-
-                                    <AuthForm>
-                                        <div className={styles.signin}>
-
-                                        </div>
-                                    </AuthForm>
+                                    <div className={styles.signin}>
+                                        <AuthForm>
+                                        </AuthForm>
+                                    </div>
                                     <div className={styles.login}>
-                                        <Image alt="hamberger" src="/images/sign in buttom.png" width={1000} height={800} />
+                                        <AuthForm>
+                                        </AuthForm>
                                     </div>
                                 </>
                             ) : (

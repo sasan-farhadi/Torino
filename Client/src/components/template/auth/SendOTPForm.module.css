@@ -41,3 +41,24 @@
     border: none;
     justify-content: center;
 }
+
+
+@media(max-width : 390px) {
+    .container {
+        width: 358px;
+    }
+
+    .container form {
+        width: 358px;
+        align-items: center;
+    }
+
+    .container form input {
+        width: 278px;
+    }
+
+
+    .container .button {
+        width: 278px;
+    }
+}
