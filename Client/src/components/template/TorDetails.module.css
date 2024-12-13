@@ -95,9 +95,11 @@
     color: #28A745;
     border: 2px solid #28A745;
 }
+
 .reservebtnres {
     display: none;
 }
+
 .reservebtnres button {
     display: none;
     width: 204px;
@@ -170,6 +172,7 @@
         height: auto;
         border: 0;
         border-radius: 0;
+        margin-top: 30px;
     }
 
     .head {
@@ -198,6 +201,96 @@
 
     .infotor {
         padding: 35px 25px 0 0;
+        gap: 18px;
+        font-size: .8rem;
+    }
+
+    .descriptions:nth-child(-n+3) {
+        display: none;
+    }
+
+    .descriptions {
+        border: none;
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .information {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .reservebtn {
+        display: none;
+    }
+
+    .reservebtnres {
+        display: block;
+    }
+
+    .reservebtnres {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+
+    .reservebtnres button {
+        display: block;
+        width: 154px;
+        height: 42px;
+    }
+
+    .container {
+        height: auto;
+    }
+}
+
+
+@media (min-width : 391px) and (max-width:480px) {
+    .container {
+        width: 470px;
+        padding: 0;
+    }
+
+    .details {
+        width: 470px;
+        height: auto;
+        border: 0;
+        border-radius: 0;
+        margin-top: 30px;
+    }
+
+    .head {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagetor {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        align-items: center;
+    }
+
+    .imagetor img {
+        width: 360px;
+        height: auto;
+    }
+
+    .tor_tite {
+        width: 470px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 25px 0 45px;
+    }
+
+    .infotor {
+        display: flex;
+        justify-content: center;
         gap: 18px;
         font-size: .8rem;
     }

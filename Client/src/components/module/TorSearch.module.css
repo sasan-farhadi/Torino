@@ -229,14 +229,14 @@
     }
 
     .select_origin {
-        width: 160px;
+        width: 200px;
         top: 50px;
         right: 0px;
     }
 
     .select_destination {
+        width: 200px;
         top: 50px;
         right: 0;
-        width: 160px;
     }
 }

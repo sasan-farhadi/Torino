@@ -34,3 +34,10 @@
         height: 362px;
     }
 }
+
+@media (min-width : 391px) and (max-width:480px) {
+    .form {
+        width: 358px;
+        height: 362px;
+    }
+}

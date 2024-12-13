@@ -45,3 +45,11 @@
         width: 160px;
     }
 }
+
+
+
+@media (min-width : 391px) and (max-width:480px) {
+    .select_option {
+        width: 200px;
+    }
+}
