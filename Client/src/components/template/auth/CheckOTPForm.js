@@ -1,12 +1,17 @@
 "use client";
 
+import styles from "@/components/template/auth/CheckOTPForm.module.css"
+
 import { useState } from "react";
 import OtpInput from "react18-input-otp";
 
 import { useCheckOtp } from "@/core/services/mutations";
+import Counter from "@/core/utils/counter";
+import Link from "next/link";
 
 function CheckOTPForm({ mobile, setStep, setIsOpen }) {
     const [code, setCode] = useState("");
+    const [disabled, setDisabled] = useState("none")
 
     const { isPending, mutate } = useCheckOtp();
 
@@ -36,13 +41,10 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
     };
 
     return (
-        <div className="flex flex-col w-[358px] h-[362px] bg-white rounded-[20px] shadow-[0_4px_4px_-0px_rgba(0,0,0,0.25)] p-6">
-            <h4 className="text-xl font-bold text-center">کد تایید را وارد کنید.</h4>
-            <form
-                className="flex flex-col justify-end gap-10 flex-1"
-                onSubmit={checkOtpHandler}
-            >
-                <label>شماره موبایل {mobile}</label>
+        <div className={styles.container}>
+            <h4>کد تایید را وارد کنید.</h4>
+            <form onSubmit={checkOtpHandler} className={styles.form} >
+                <label>کد تایید به شماره موبایل {mobile} ارسال شد</label>
                 <div style={{ direction: "ltr" }}>
                     <OtpInput
                         value={code}
@@ -57,10 +59,9 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
                         }}
                     />
                 </div>
-                <button
-                    className="bg-[#28A745] h-11 text-white rounded-md"
-                    type="submit"
-                >
+                <div className={styles.timer}> ارسال مجدد کد تا <Counter setDisabled={setDisabled} /> </div>
+                <Link href="/" style={{ display: disabled }}> ارسال مجدد کد</Link>
+                <button className={styles.button} type="submit" >
                     ورود به تورینو
                 </button>
             </form>

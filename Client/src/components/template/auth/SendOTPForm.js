@@ -41,7 +41,7 @@ function SendOTPForm({ mobile, setMobile, setStep }) {
                 <label>شماره موبایل خود را وارد کنید</label>
                 <input type="text" placeholder="مثال : 1234***0912" value={mobile} onChange={(e) => setMobile(e.target.value)} />
                 {!!error && <p className="text-red-500">{error}</p>}
-                <button type="submit" >
+                <button className={styles.button} type="submit" >
                     ارسال کد تایید
                 </button>
             </form>

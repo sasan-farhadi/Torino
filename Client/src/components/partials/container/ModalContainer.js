@@ -6,9 +6,10 @@ function ModalContainer({ children, isOpen, setIsOpen }) {
     return (
         <div className={styles.container}>
             <div className={styles.form}>
+                <div className={styles.close} onClick={() => setIsOpen(false)}>X</div>
                 <div>{children}</div>
             </div>
-        </div>
+        </div >
     );
 }
 

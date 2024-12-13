@@ -1,4 +1,4 @@
-import AuthForm from "@/components/template/auth";
+import React from 'react';
 import HomePage from "@/components/template/HomePage";
 
 export default function Home() {

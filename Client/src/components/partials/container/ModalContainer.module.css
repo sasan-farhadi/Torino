@@ -17,4 +17,13 @@
     height: 362px;
     background-color: #fff;
     border-radius: 20px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    font-weight: bold;
+    cursor: pointer;
+    left: 20px;
+    top: 15px;
 }

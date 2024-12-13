@@ -13,10 +13,19 @@
     font-size: 23px;
 }
 
+.container label {
+    text-align: center;
+}
+
 .container form {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.form div {
+    justify-content: center;
+    align-items: center;
 }
 
 .container form input {
@@ -40,4 +49,10 @@
     border-radius: 6px;
     border: none;
     justify-content: center;
+}
+
+.timer {
+    text-align: center;
+    display: flex;
+    gap: 15px;
 }
