@@ -79,3 +79,36 @@
         border-bottom: 3px solid #28A745;
     }
 }
+
+
+@media (min-width : 391px) and (max-width:480px) {
+    .container {
+        width: 390px;
+        margin: auto;
+    }
+
+    .main {
+        flex-direction: column;
+        width: 390px;
+    }
+
+    .aside {
+        border: none;
+        height: auto;
+        padding: 0 15px;
+    }
+
+    .aside ul {
+        display: flex;
+        width: 340px;
+        gap: 10px;
+        border-radius: 0;
+    }
+
+    .active {
+        background-color: #fff;
+        color: #28A745;
+        border-radius: 0;
+        border-bottom: 3px solid #28A745;
+    }
+}

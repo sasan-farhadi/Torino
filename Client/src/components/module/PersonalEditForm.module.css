@@ -106,3 +106,28 @@
         border: none;
     }
 }
+
+@media (min-width : 391px) and (max-width:480px) {
+    
+    .infopersonal {
+        width: 360px;
+        height: auto;
+        padding: 0 10px;
+    }
+
+    .infopersonal input {
+        width: 310px;
+    }
+
+    .infopersonal select {
+        width: 310px;
+    }
+
+    .infoname div {
+        justify-content: space-between;
+    }
+
+    .button {
+        border: none;
+    }
+}

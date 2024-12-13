@@ -132,3 +132,33 @@
         gap: 30px;
     }
 }
+
+@media (min-width : 391px) and (max-width:480px) {
+
+    .main {
+        align-items: center;
+        width: 390px;
+    }
+
+    .infoaccount {
+        width: 360px;
+        height: auto;
+        border: 1px solid #00000033;
+        padding: 10px 0;
+    }
+
+    .infoaccount h3 {
+        margin-right: 15px;
+    }
+
+    .account div {
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    .account {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
