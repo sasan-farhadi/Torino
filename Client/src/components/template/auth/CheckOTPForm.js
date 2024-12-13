@@ -6,13 +6,13 @@ import { useState } from "react";
 import OtpInput from "react18-input-otp";
 
 import { useCheckOtp } from "@/core/services/mutations";
-import Counter from "@/core/utils/counter";
-import Link from "next/link";
+import { setCookie } from "@/core/utils/cookie";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 function CheckOTPForm({ mobile, setStep, setIsOpen }) {
     const [code, setCode] = useState("");
-    const [disabled, setDisabled] = useState("none")
-
+    const router = useRouter()
     const { isPending, mutate } = useCheckOtp();
 
     const checkOtpHandler = (event) => {
@@ -28,9 +28,10 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
                     setCookie("refreshToken", data?.data?.refreshToken, 365);
                     setIsOpen(false);
                     setStep(1);
+                    router.refresh()
                 },
                 onError: (error) => {
-                    console.log(error);
+                    toast.error(error.message)
                 },
             }
         );
@@ -59,8 +60,7 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
                         }}
                     />
                 </div>
-                <div className={styles.timer}> ارسال مجدد کد تا <Counter setDisabled={setDisabled} /> </div>
-                <Link href="/" style={{ display: disabled }}> ارسال مجدد کد</Link>
+                <div className={styles.timer}> ارسال مجدد کد تا </div>
                 <button className={styles.button} type="submit" >
                     ورود به تورینو
                 </button>

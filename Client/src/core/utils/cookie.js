@@ -9,4 +9,14 @@ function getCookie(name) {
     if (parts?.length === 2) return parts?.pop()?.split(";")?.shift();
 }
 
-export { setCookie, getCookie };
+
+const logoutHandler = () => {
+    document.cookie.split(";").forEach(cookie => {
+        document.cookie = cookie
+            .replace(/^ +/, "")
+            .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+        location.reload()
+    });
+};
+
+export { setCookie, getCookie, logoutHandler };

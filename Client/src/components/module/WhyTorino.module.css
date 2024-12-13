@@ -202,3 +202,74 @@
         display: none;
     }
 }
+
+@media (min-width : 391px) and (max-width:480px) {   
+    .container {
+        width: 480px;
+        height: 500px;
+        margin: auto;
+        position: relative;
+    }
+    
+    .container>.why {
+        display: block;
+        display: flex;
+    }
+    
+    .why {
+        position: absolute;
+        top: 10px;
+        right: 40px;
+    }
+
+    .why_tour {
+        width: 480px;
+        height: 645px;
+        margin-bottom: 0;
+    }
+
+
+    .slide_image {
+        width: 480px;
+    }
+
+    .slide_image img:nth-child(1) {
+        left: 120px;
+        width: 255px;
+        height: 284px;
+    }
+
+    .slide_image img:nth-child(2) {
+        left: 90px;
+        top: 20px;
+        width: 253px;
+        height: 247px;
+    }
+
+    .slide_image img:nth-child(3) {
+        left: 60px;
+        top: 50px;
+        width: 168px;
+        height: 198px;
+    }
+
+    .slide_image img:nth-child(4) {
+        left: 40px;
+        top: 70px;
+        width: 142px;
+        height: 162px;
+    }
+
+    .next_prev {
+        width: 480px;
+        margin: 0 0 0 110px;
+    }
+
+    .info_text {
+        display: none;
+    }
+
+    .info_why {
+        display: none;
+    }
+}

@@ -6,11 +6,13 @@ import Link from "next/link"
 import { useState } from "react"
 import HambergerMenu from "../module/HambergerMenu"
 import AuthForm from "../template/auth"
+import { getCookie, logoutHandler } from "@/core/utils/cookie"
 
 const Header = () => {
+    const token = getCookie("accessToken")
+
     const [show, setShow] = useState("none")
     const [showHamberger, setShowHamberger] = useState("none")
-    const [showModal, setShowModal] = useState("none")
     return (
         <header className={styles.header}>
             <div onClick={() => setShowHamberger("none")} style={{ display: showHamberger }}>
@@ -32,7 +34,7 @@ const Header = () => {
                     </div>
                     <div className={styles.menu_left}>
                         {
-                            true ? (
+                            !token ? (
                                 <>
                                     <div className={styles.signin}>
                                         <AuthForm>
@@ -61,9 +63,9 @@ const Header = () => {
                                                     <Image alt="image" src="/images/user-icon3.png" width={1000} height={800} />
                                                     <Link href="/profile"><p> اطلاعات حساب کاربری </p></Link>
                                                 </li>
-                                                <li>
+                                                <li onClick={logoutHandler} >
                                                     <Image alt="image" src="/images/logout.png" width={1000} height={800} />
-                                                    <p> خروج از حساب کاربری </p>
+                                                    <p onClick={logoutHandler}> خروج از حساب کاربری </p>
                                                 </li>
                                             </ul>
                                         </div>

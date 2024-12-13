@@ -167,7 +167,70 @@
 
     .select_origin {
         width: 160px;
-        top : 50px;
+        top: 50px;
+        right: 0px;
+    }
+
+    .select_destination {
+        top: 50px;
+        right: 0;
+        width: 160px;
+    }
+}
+
+
+@media (min-width : 391px) and (max-width:480px) {
+    .container_fluid {
+        width: 480px;
+    }
+
+    .text_top_search {
+        width: 480px;
+        font-size: .8rem;
+        margin: 15px 0px;
+    }
+
+    .search {
+        border: none;
+        width: 480px;
+        height: 180px;
+        flex-wrap: wrap;
+        padding: 0 30px;
+        gap: 10px;
+    }
+
+    .destination {
+        padding: 0 30px;
+        width: 205px;
+        border: 2px solid #00000026;
+        border-radius: 10px;
+        height: 47px;
+    }
+
+    .origin {
+        width: 205px;
+        padding: 0 30px;
+        border: 2px solid #00000026;
+        border-radius: 10px;
+        height: 47px;
+    }
+
+    .select_date {
+        border: 2px solid #00000026;
+        padding: 5px 30px;
+        border-radius: 10px;
+        width: 480px;
+        height: 47px;
+    }
+
+    .search .button {
+        width: 415px;
+        height: 47px;
+    }
+
+    .select_origin {
+        width: 160px;
+        top: 50px;
         right: 0px;
     }
 

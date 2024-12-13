@@ -209,3 +209,44 @@
     }
 
 }
+
+
+@media (max-width:480px) {
+    .container {
+        width: 390px;
+        margin: auto;
+    }
+
+    .menu_right {
+        display: none;
+    }
+
+    .hamber img {
+        display: block;
+    }
+
+    .signin {
+        display: none;
+    }
+    
+    .login {
+        display: block;
+        margin-right: 30px;
+    }
+    .menu {
+        gap: 230px;
+    }
+
+    .showprofile {
+        display: none;
+        top: 35px;
+        left: -40px;
+        width: 190px;
+        background-color: #ffffff;
+        position: absolute;
+        border-radius: 10px;
+        border: 1px solid #00000033;
+        z-index: 1000;
+    }
+
+}
