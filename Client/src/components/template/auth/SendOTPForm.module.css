@@ -1,0 +1,45 @@
+.container {
+    width: 561px;
+    height: 362px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container h4 {
+    font-weight: 600;
+    font-size:23px ;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container form input {
+    width: 491px;
+    height: 54px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #00000040;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+}
+
+.container form button {
+    width: Fixed (491px)px;
+    height: Fixed (54px)px;
+    top: 268px;
+    left: 40px;
+    padding: 8px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #28A745;
+    border-radius: 6px;
+    border: none;
+}

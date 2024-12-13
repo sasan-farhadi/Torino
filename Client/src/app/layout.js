@@ -1,6 +1,8 @@
-import { yekan } from "@/utils/fonts"
+import { yekan } from "@/core/utils/fonts"
 import "./globals.css";
 import Layout from "@/components/layout/Layout";
+import TanstackQueryProvider from "@/components/partials/provider/TanstackQueryProvider";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "Torino | تورینو",
@@ -12,9 +14,12 @@ export default function RootLayout({ children }) {
     <html lang="fa" dir="rtl">
       <link rel="icon" href="/favicon.png" />
       <body className={yekan.className}>
-        <Layout>
-          {children}
-        </Layout>
+        <TanstackQueryProvider>
+          <Layout>
+            {children}
+            <Toaster />
+          </Layout>
+        </TanstackQueryProvider>
       </body>
     </html>
   );

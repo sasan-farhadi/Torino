@@ -5,10 +5,12 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import HambergerMenu from "../module/HambergerMenu"
+import AuthForm from "../template/auth"
 
 const Header = () => {
     const [show, setShow] = useState("none")
     const [showHamberger, setShowHamberger] = useState("none")
+    const [showModal, setShowModal] = useState("none")
     return (
         <header className={styles.header}>
             <div onClick={() => setShowHamberger("none")} style={{ display: showHamberger }}>
@@ -30,14 +32,14 @@ const Header = () => {
                     </div>
                     <div className={styles.menu_left}>
                         {
-                            !true ? (
+                            true ? (
                                 <>
-                                    <div className={styles.signin}>
-                                        <button >
-                                            <Image src="/images/user-icon.png" alt="user-icon" width={800} height={1000} />
-                                            <Link href="/auth/signin">ورود | ثبت نام</Link>
-                                        </button>
-                                    </div>
+
+                                    <AuthForm>
+                                        <div className={styles.signin}>
+
+                                        </div>
+                                    </AuthForm>
                                     <div className={styles.login}>
                                         <Image alt="hamberger" src="/images/sign in buttom.png" width={1000} height={800} />
                                     </div>
