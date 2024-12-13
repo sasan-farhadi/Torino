@@ -111,3 +111,53 @@
         height: 38px;
     }
 }
+
+@media (min-width : 391px) and (max-width:480px) {
+    .hr {
+        border: 1px dashed #00000033;
+    }
+
+    .footer {
+        width: 480px;
+        flex-wrap: wrap;
+        padding: 15px 15px;
+    }
+
+    .about {
+        width: 220px;
+    }
+
+    .customer {
+        width: 220px;
+    }
+
+    .certificate {
+        width: 480px;
+        display: flex;
+        padding: 0 0 0 15px;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    
+    .contact {
+        width: 50%;
+        padding: 39px 0 0 20px;
+    }
+    
+    .certificate_icon {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        gap: 15px;
+    }
+
+    .contact img {
+        width: 100px;
+        height: 30px;
+    }
+
+    .certificate_icon img {
+        width: 35px;
+        height: 38px;
+    }
+}

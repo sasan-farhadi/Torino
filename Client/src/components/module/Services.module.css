@@ -44,7 +44,30 @@
     .services h2 {
         font-size: 20px;
     }
-    
+
+    .services p {
+        font-size: 10px;
+    }
+}
+
+
+@media (min-width : 391px) and (max-width:480px) {
+    .main {
+        flex-direction: column;
+        margin: 0 45px 0 0 ;
+        padding: 30px 0;
+        gap: 70px;
+    }
+
+    .services img {
+        width: 71px;
+        height: 64px;
+    }
+
+    .services h2 {
+        font-size: 20px;
+    }
+
     .services p {
         font-size: 10px;
     }
