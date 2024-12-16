@@ -1,4 +1,4 @@
-import { useMutation, useQueryClient, useSuspenseQuery } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 import api from "../config/api";
 
@@ -17,15 +17,30 @@ const useCheckOtp = () => {
   return useMutation({ mutationFn, onSuccess });
 };
 
-const allTour = async (id) => {
-  if (id) {
-    return await api.get(`/tour/${id}`)
+
+const useUpdateProfile = () => {
+  const queryClient = useQueryClient();
+  const mutationFn = async (data) => {
+    const res = await api.put("/user/profile", data)
+    return res.data
   }
 
-  return api.get("tour")
+  const onSuccess = () => queryClient.invalidateQueries({ queryKey: ["profile-update"] })
 
-}
+  return useMutation({ mutationFn, onSuccess })
+
+  // return useMutation(
+  //   async (updatedData) => {
+  //     const response = await api.put("/user/profile", updatedData);
+  //     return response.data;
+  //   },
+  //   {
+  //     onSuccess: () => {
+  //       queryClient.invalidateQueries("get-profile");
+  //     },
+  //   }
+  // );
+};
 
 
-
-export { useSendOtp, useCheckOtp, allTour };
+export { useSendOtp, useCheckOtp, useUpdateProfile };

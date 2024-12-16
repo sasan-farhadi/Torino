@@ -7,12 +7,15 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { dateCalc, jalali } from "@/core/utils/jalaliDate"
+import Loader from "../module/Loader"
 
 const TorDetails = ({ data }) => {
-    const { id, title, startDate, origin, endDate, fleetVehicle, availableSeats, price, insurance, image } = data?.data
+
+    if (!data) return <Loader />
+
+    const { id, title, startDate, origin, endDate, fleetVehicle, availableSeats, price, insurance, image } = data
     const { name } = origin
     const res = dateCalc(startDate, endDate)
-    console.log(res)
     return (
         <div className={styles.container}>
             <div className={styles.details}>

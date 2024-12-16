@@ -8,4 +8,31 @@ const useGetUserData = (page) => {
 
     return useQuery({ queryFn, queryKey })
 }
-export { useGetUserData }
+
+const useGetTour = () => {
+    const queryFn = () => api.get("/tour")
+    const queryKey = ["tour-data"]
+
+    return useQuery({ queryFn, queryKey })
+}
+
+const useGetTourId = (id) => {
+    const queryFn = async () => {
+        const response = await api.get(`/tour/${id}`);
+        return response.data;
+    };
+
+    const queryKey = ["tour-id", id];
+
+    return useQuery({ queryFn, queryKey });
+};
+
+
+const useGetProfile = () => {
+    const queryFn = () => api.get("/user/profile")
+    const queryKey = ["get-profile"]
+
+    return useQuery({ queryFn, queryKey })
+}
+
+export { useGetUserData, useGetTour, useGetTourId, useGetProfile }

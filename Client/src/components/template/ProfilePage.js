@@ -6,8 +6,12 @@ import EmailConfirmInput from "../module/EmailConfirmInput"
 import { useState } from "react"
 import PersonalEditForm from "../module/PersonalEditForm"
 import BankEditForm from "../module/BankEditForm"
+import { useGetProfile } from "@/core/services/queries"
 
 const ProfilePage = () => {
+    const { data } = useGetProfile()
+
+    console.log("######### Profile Data : ", data)
     const [showEditEmail, setShowEditEmail] = useState(false)
     const [showEditPersonal, setShowEditPersonal] = useState(false)
     const [showEditBank, setShowEditBank] = useState(false)
@@ -21,11 +25,11 @@ const ProfilePage = () => {
                     <div className={styles.account}>
                         <div>
                             <p>شماره موبایل</p>
-                            <p>09224521125</p>
+                            <p>{data?.data.mobile}</p>
                         </div>
                         <div>
                             <p>ایمیل</p>
-                            <p>___</p>
+                            <p>{data?.data.email ? data?.data.email : "---"}</p>
                             <Link href="#" onClick={() => setShowEditEmail(true)}>
                                 <Image src="/images/edit-2.png" width={1000} height={800} alt="edit" />
                                 <span>افزودن</span>

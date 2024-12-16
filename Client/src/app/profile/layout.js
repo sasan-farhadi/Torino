@@ -18,7 +18,6 @@ const Layouts = ({ children }) => {
         <Loader />
     </div>
 
-
     return (
         <div>
             <LayoutProfile >
