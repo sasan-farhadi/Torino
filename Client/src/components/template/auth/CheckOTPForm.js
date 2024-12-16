@@ -9,10 +9,12 @@ import { useCheckOtp } from "@/core/services/mutations";
 import { setCookie } from "@/core/utils/cookie";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import { useGetUserData } from "@/core/services/queries";
+import Loader from "@/components/module/Loader";
 
 function CheckOTPForm({ mobile, setStep, setIsOpen }) {
+    const { refetch } = useGetUserData()
     const [code, setCode] = useState("");
-    const router = useRouter()
     const { isPending, mutate } = useCheckOtp();
 
     const checkOtpHandler = (event) => {
@@ -28,7 +30,7 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
                     setCookie("refreshToken", data?.data?.refreshToken, 365);
                     setIsOpen(false);
                     setStep(1);
-                    router.refresh()
+                    refetch()
                 },
                 onError: (error) => {
                     toast.error(error.message)
@@ -61,9 +63,13 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
                     />
                 </div>
                 <div className={styles.timer}> ارسال مجدد کد تا </div>
-                <button className={styles.button} type="submit" >
-                    ورود به تورینو
-                </button>
+                {
+                    isPending ? <Loader /> : (
+                        <button className={styles.button} type="submit" >
+                            ورود به تورینو
+                        </button>
+                    )
+                }
             </form>
         </div>
     );
