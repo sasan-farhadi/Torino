@@ -16,6 +16,7 @@ const TorDetails = ({ data }) => {
     const { id, title, startDate, origin, endDate, fleetVehicle, availableSeats, price, insurance, image } = data
     const { name } = origin
     const res = dateCalc(startDate, endDate)
+
     return (
         <div className={styles.container}>
             <div className={styles.details}>
@@ -44,7 +45,7 @@ const TorDetails = ({ data }) => {
                         </div>
                         <div className={styles.reservebtn}>
                             <p>{sp(price)} <span>تومان</span></p>
-                            <Link href="/tor/sale">
+                            <Link href={`/tor/sale/${id}`}>
                                 <button>
                                     رزرو و خرید
                                 </button>
@@ -103,7 +104,7 @@ const TorDetails = ({ data }) => {
                     </div>
                 </div>
                 <div className={styles.reservebtnres}>
-                    <Link href="/tor/sale">
+                    <Link href={`/tor/sale/${id}`}>
                         <button>
                             رزرو و خرید
                         </button>
@@ -111,7 +112,7 @@ const TorDetails = ({ data }) => {
                     <p>17.500.000 <span>تومان</span></p>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

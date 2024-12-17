@@ -51,8 +51,23 @@
     transition: all ease-in-out .3s;
 }
 
+.button a {
+    width: 144px;
+    height: 41px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #28A745;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    text-align: center;
+    transition: all ease-in-out .3s;
+}
 
-.button button:last-child {
+
+.button a:last-child {
     background-color: #fff;
     color: #28A745;
     border: 2px solid #28A745;
@@ -64,7 +79,7 @@
     border: 2px solid #28A745;
 }
 
-.button button:hover:last-child {
+.button a:hover:last-child {
     background-color: rgb(194, 54, 22);
     color: #fff;
     border: 2px solid rgb(194, 54, 22);
@@ -88,7 +103,7 @@
         height: auto;
         padding: 0 10px;
     }
-    
+
     .button {
         border: none;
     }
@@ -111,7 +126,7 @@
         height: auto;
         padding: 0 10px;
     }
-    
+
     .button {
         border: none;
     }

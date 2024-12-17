@@ -2,7 +2,7 @@ import { toJalaali } from "jalaali-js"
 import { e2p } from "./number"
 
 const jalali = (date) => {
-    const { jy, jd, jm } = toJalaali(new Date(date))
+    const { jy, jm, jd } = toJalaali(new Date(date))
     const newDate = `${e2p(jy)}/${e2p(jm)}/${e2p(jd)}`
     return newDate
 }

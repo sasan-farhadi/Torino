@@ -2,26 +2,20 @@
 
 import styles from "@/components/module/EmailConfirmInput.module.css"
 import { useUpdateProfile } from "@/core/services/mutations"
-import { useRouter } from "next/navigation"
+import { useGetProfile } from "@/core/services/queries"
 
 import { useState } from "react"
-import toast from "react-hot-toast"
 
-const EmailConfirmInput = () => {
-    const [email, setEmail] = useState("")
+const EmailConfirmInput = ({ setShowEditEmail }) => {
+    const { data: profiles } = useGetProfile()
+
+    const [email, setEmail] = useState(profiles.data.email)
     const { data, mutate } = useUpdateProfile();
 
-    const router = useRouter()
-
-    console.log("$$$$$ res ", data)
-
     const editHandler = () => {
-        mutate({ email }, {
-            onSuccess: (
-                toast.success("تغییرات انجام شد"),
-                router.push("/profile")
-            )
-        })
+        mutate({ email })
+        setShowEditEmail(false)
+        location.reload()
     }
 
     return (

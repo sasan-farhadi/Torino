@@ -1,11 +1,20 @@
 "use client"
+
 import styles from "@/components/template/TorSale.module.css"
 import Image from "next/image"
 import DatePicker from "react-multi-date-picker"
 import persian from "react-date-object/calendars/persian"
 import persian_fa from "react-date-object/locales/persian_fa"
+import { useState } from "react"
 
-const TorSalePage = () => {
+const TorSalePage = ({ data, mutate }) => {
+    const [firstName, setFirstName] = useState("")
+
+    const addHandler = () => {
+        console.log(firstName)
+        mutate({ firstName })
+    }
+
     return (
         <div>
             <div className={styles.container}>
@@ -17,7 +26,7 @@ const TorSalePage = () => {
                                 <h3>مشخصات مسافر</h3>
                             </div>
                             <div className={styles.inputs}>
-                                <input type="text" placeholder="نام و نام خانوادگی" />
+                                <input type="text" placeholder="نام و نام خانوادگی" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
                                 <input type="text" placeholder="کدملی" />
                                 <DatePicker placeholder="تاریخ تولد" calendar={persian} locale={persian_fa} />
                                 <select name="" id="">
@@ -36,7 +45,7 @@ const TorSalePage = () => {
                         <div className={styles.price}>
                             <h4>قیمت نهایی</h4>
                             <h2>17.500.000 <span>تومان</span></h2>
-                            <button>ثبت و خرید نهایی</button>
+                            <button onClick={addHandler}>ثبت و خرید نهایی</button>
                         </div>
                     </div>
                 </div>

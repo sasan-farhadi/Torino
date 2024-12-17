@@ -35,4 +35,28 @@ const useGetProfile = () => {
     return useQuery({ queryFn, queryKey })
 }
 
-export { useGetUserData, useGetTour, useGetTourId, useGetProfile }
+
+const useGetMyTours = () => {
+    const queryFn = () => api.get("/user/tours")
+    const queryKey = ["get-tours"]
+
+    return useQuery({ queryFn, queryKey })
+}
+
+
+const useGetMyTransaction = () => {
+    const queryFn = () => api.get("/user/transactions")
+    const queryKey = ["get-transaction"]
+
+    return useQuery({ queryFn, queryKey })
+}
+
+const useGetBasket = () => {
+    const queryFn = () => api.get("/basket")
+    const queryKey = ["get-basket"]
+
+    return useQuery({ queryFn, queryKey })
+}
+
+
+export { useGetUserData, useGetTour, useGetTourId, useGetProfile, useGetMyTours, useGetMyTransaction, useGetBasket }

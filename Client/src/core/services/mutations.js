@@ -24,23 +24,22 @@ const useUpdateProfile = () => {
     const res = await api.put("/user/profile", data)
     return res.data
   }
-
   const onSuccess = () => queryClient.invalidateQueries({ queryKey: ["profile-update"] })
 
   return useMutation({ mutationFn, onSuccess })
-
-  // return useMutation(
-  //   async (updatedData) => {
-  //     const response = await api.put("/user/profile", updatedData);
-  //     return response.data;
-  //   },
-  //   {
-  //     onSuccess: () => {
-  //       queryClient.invalidateQueries("get-profile");
-  //     },
-  //   }
-  // );
 };
 
 
-export { useSendOtp, useCheckOtp, useUpdateProfile };
+const useGetBasketId = (id) => {
+  const queryClient = useQueryClient();
+  const mutationFn = async (data) => {
+    const res = await api.put(`/basket/${id}`, data)
+    return res.data
+  }
+  const onSuccess = () => queryClient.invalidateQueries({ queryKey: ["basket-id"] })
+
+  return useMutation({ mutationFn, onSuccess })
+};
+
+
+export { useSendOtp, useCheckOtp, useUpdateProfile, useGetBasketId };
