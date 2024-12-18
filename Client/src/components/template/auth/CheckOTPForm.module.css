@@ -51,6 +51,18 @@
     justify-content: center;
 }
 
+.container .resend {
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    color: #fff;
+    background-color: #d26907;
+    border-radius: 6px;
+    border: none;
+    justify-content: center;
+}
+
+
 .timer {
     text-align: center;
     display: flex;

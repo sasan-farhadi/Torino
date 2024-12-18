@@ -1,28 +1,33 @@
 "use client";
 
 import styles from "@/components/template/auth/CheckOTPForm.module.css"
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import OtpInput from "react18-input-otp";
-
-import { useCheckOtp } from "@/core/services/mutations";
+import { useSendOtp, useCheckOtp } from "@/core/services/mutations";
 import { setCookie } from "@/core/utils/cookie";
 import toast from "react-hot-toast";
-import { useRouter } from "next/navigation";
 import { useGetUserData } from "@/core/services/queries";
 import Loader from "@/components/module/Loader";
 
 function CheckOTPForm({ mobile, setStep, setIsOpen }) {
     const { refetch } = useGetUserData()
     const [code, setCode] = useState("");
-    const { isPending, mutate } = useCheckOtp();
+    const { isPending: isPendingCheck, mutate: checkOtpMutate } = useCheckOtp();
+    const { isPending: isPendingSend, mutate: sendOtpMutate } = useSendOtp();
+    const [counter, setCounter] = useState(60);
+
+    useEffect(() => {
+        if (counter > 0) {
+            const timer = setTimeout(() => setCounter(counter - 1), 1000);
+            return () => clearTimeout(timer);
+        }
+    }, [counter]);
 
     const checkOtpHandler = (event) => {
         event.preventDefault();
+        if (isPendingCheck) return;
 
-        if (isPending) return;
-
-        mutate(
+        checkOtpMutate(
             { mobile, code },
             {
                 onSuccess: (data) => {
@@ -34,6 +39,23 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
                 },
                 onError: (error) => {
                     toast.error(error.message)
+                },
+            }
+        );
+    };
+
+    const resendOtpHandler = () => {
+        if (isPendingSend || counter > 0) return;
+
+        sendOtpMutate(
+            { mobile },
+            {
+                onSuccess: (data) => {
+                    toast.success(data?.data?.message);
+                    setCounter(60);
+                },
+                onError: (error) => {
+                    toast.error(error.message);
                 },
             }
         );
@@ -62,9 +84,22 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
                         }}
                     />
                 </div>
-                <div className={styles.timer}> ارسال مجدد کد تا </div>
+                <div className={styles.timer}>
+                    {counter > 0 ? (
+                        <>ارسال مجدد کد تا {counter} ثانیه</>
+                    ) : (
+                        <button
+                            type="button"
+                            onClick={resendOtpHandler}
+                            disabled={isPendingSend}
+                            className={styles.resend}
+                        >
+                            ارسال مجدد کد
+                        </button>
+                    )}
+                </div>
                 {
-                    isPending ? <Loader /> : (
+                    isPendingCheck ? <Loader /> : (
                         <button className={styles.button} type="submit" >
                             ورود به تورینو
                         </button>

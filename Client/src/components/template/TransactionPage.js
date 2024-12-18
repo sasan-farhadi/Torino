@@ -4,7 +4,6 @@ import styles from "@/components/template/TransactionPage.module.css"
 import { jalali } from "@/core/utils/jalaliDate"
 
 const TransactionPage = ({ data }) => {
-    console.log(data)
     return (
         <div className={styles.main}>
             <div>

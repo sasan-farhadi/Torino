@@ -14,7 +14,7 @@
     "title": "تور کردستان",
     "fleetVehicle": "Bus",
     "price": 105000,
-    "availableSeats": 24,
+    "availableSeats": 23,
     "insurance": true,
     "options": [
       "راهنمای تور",
@@ -61,7 +61,7 @@
     "title": "سلیمانیه",
     "fleetVehicle": "SUV",
     "price": 35000,
-    "availableSeats": 39,
+    "availableSeats": 38,
     "insurance": true,
     "options": [
       "نهار و صبحانه",
@@ -84,7 +84,7 @@
     "title": "هولر",
     "fleetVehicle": "SUV",
     "price": 105000,
-    "availableSeats": 19,
+    "availableSeats": 18,
     "insurance": false,
     "options": [
       "نهار و صبحانه",
@@ -107,7 +107,7 @@
     "title": "تور مازندران",
     "fleetVehicle": "SUV",
     "price": 185000,
-    "availableSeats": 299,
+    "availableSeats": 298,
     "insurance": true,
     "options": [
       "نهار و صبحانه",

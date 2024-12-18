@@ -2,6 +2,7 @@ import styles from "@/components/module/Card.module.css"
 import { sp } from "@/core/utils/number"
 import Image from "next/image"
 import Link from "next/link"
+import Loader from "./Loader"
 
 const Card = ({ data, newData }) => {
     if (!newData) {
@@ -68,7 +69,7 @@ const Card = ({ data, newData }) => {
                                 </Link>
                             ))
                         ) : (
-                            <p>هیچ توری موجود نیست</p>
+                            <div><Loader /></div>
                         )
                     )
                 }
