@@ -5,18 +5,29 @@ import { useUpdateProfile } from "@/core/services/mutations"
 import { useGetProfile } from "@/core/services/queries"
 
 import { useState } from "react"
+import toast from "react-hot-toast"
 
 const EmailConfirmInput = ({ setShowEditEmail }) => {
     const { data: profiles } = useGetProfile()
 
     const [email, setEmail] = useState(profiles.data.email)
-    const { data, mutate } = useUpdateProfile();
+    const { mutate } = useUpdateProfile();
 
     const editHandler = () => {
-        mutate({ email })
-        setShowEditEmail(false)
-        location.reload()
-    }
+        mutate(
+            { email },
+            {
+                onSuccess: () => {
+                    setShowEditEmail(false);
+                    toast.success("ایمیل با موفقیت ثبت شد")
+                },
+                onError: (error) => {
+                    toast.error("خطا :", error.message);
+                },
+            }
+        );
+    };
+
 
     return (
         <>

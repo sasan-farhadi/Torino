@@ -1,11 +1,10 @@
 "use client"
 
 import styles from "@/components/template/TransactionPage.module.css"
-import { useGetMyTransaction } from "@/core/services/queries"
+import { jalali } from "@/core/utils/jalaliDate"
 
-const TransactionPage = () => {
-    const { data } = useGetMyTransaction()
-    console.log("#### Transaction", data)
+const TransactionPage = ({ data }) => {
+    console.log(data)
     return (
         <div className={styles.main}>
             <div>
@@ -15,14 +14,16 @@ const TransactionPage = () => {
                     <p>نوع تراکنش</p>
                     <p>شماره سفارش</p>
                 </div>
-
-                <div className={styles.list}>
-                    <p>1402/10/12 - 14:24</p>
-                    <p>12.000.000</p>
-                    <p>ثبت نام در تور گردشگری</p>
-                    <p>سفارش12054902</p>
-                </div>
-
+                {
+                    data?.data.map(x => (
+                        <div key={x.id} className={styles.list}>
+                            <p>{jalali(x.createdAt)}</p>
+                            <p>{x.amount}</p>
+                            <p>{x.type}</p>
+                            <p>سفارش {(x.id).split("-")[4]}</p>
+                        </div>
+                    ))
+                }
             </div>
         </div>
     )

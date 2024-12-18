@@ -41,5 +41,23 @@ const useGetBasketId = (id) => {
   return useMutation({ mutationFn, onSuccess })
 };
 
+const usePostOrder = () => {
+  const queryClient = useQueryClient();
+  const mutationFn = async (data) => {
+    try {
+      const res = await api.post("/order", data);
+      return res.data;
+    } catch (error) {
+      // مدیریت ارورها
+      console.error("Error posting order:", error);
+      throw error;
+    }
+  };
 
-export { useSendOtp, useCheckOtp, useUpdateProfile, useGetBasketId };
+  const onSuccess = () => queryClient.invalidateQueries({ queryKey: ["order-tour"] })
+
+  return useMutation({ mutationFn, onSuccess })
+};
+
+
+export { useSendOtp, useCheckOtp, useUpdateProfile, useGetBasketId, usePostOrder };

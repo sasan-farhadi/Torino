@@ -9,13 +9,18 @@ import Link from "next/link"
 import { dateCalc, jalali } from "@/core/utils/jalaliDate"
 import Loader from "../module/Loader"
 
-const TorDetails = ({ data }) => {
+const TorDetails = ({ data, basket, mutate }) => {
 
     if (!data) return <Loader />
 
     const { id, title, startDate, origin, endDate, fleetVehicle, availableSeats, price, insurance, image } = data
     const { name } = origin
     const res = dateCalc(startDate, endDate)
+
+
+    const addHandler = () => {
+        mutate()
+    }
 
     return (
         <div className={styles.container}>
@@ -46,7 +51,7 @@ const TorDetails = ({ data }) => {
                         <div className={styles.reservebtn}>
                             <p>{sp(price)} <span>تومان</span></p>
                             <Link href={`/tor/sale/${id}`}>
-                                <button>
+                                <button onClick={addHandler}>
                                     رزرو و خرید
                                 </button>
                             </Link>
@@ -105,7 +110,7 @@ const TorDetails = ({ data }) => {
                 </div>
                 <div className={styles.reservebtnres}>
                     <Link href={`/tor/sale/${id}`}>
-                        <button>
+                        <button onClick={addHandler}>
                             رزرو و خرید
                         </button>
                     </Link>

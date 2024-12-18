@@ -6,7 +6,7 @@ import { useState } from "react"
 import toast from "react-hot-toast"
 
 const BankEditForm = ({ setShowEditBank }) => {
-    const { data, mutate } = useUpdateProfile()
+    const { mutate } = useUpdateProfile()
     const { data: profiles } = useGetProfile()
 
     const [form, setForm] = useState({ shaba_code: profiles.data.shaba_code, debitCard_code: profiles.data.debitCard_code, accountIdentifier: profiles.data.accountIdentifier })
@@ -16,18 +16,22 @@ const BankEditForm = ({ setShowEditBank }) => {
         setForm((data) => ({ ...data, [name]: value }))
     }
 
-
     const editHandler = (e) => {
-        e.preventDefault()
-        mutate(form)
-        if (data?.message) {
-            toast.success("تغییرات با موفقیت انجام شد")
-            setShowEditBank(false)
-            location.reload()
-        } else {
-            toast.error("خطا در ویرایش اطلاعات")
-        }
-    }
+        e.preventDefault();
+
+        mutate(form, {
+            onSuccess: (data) => {
+                if (data?.message) {
+                    toast.success("تغییرات با موفقیت انجام شد");
+                    setShowEditBank(false);
+                }
+            },
+            onError: (error) => {
+                toast.error(`خطا : ${error.message}`);
+            },
+        });
+    };
+
     return (
         <>
             <div className={styles.infopersonal}>

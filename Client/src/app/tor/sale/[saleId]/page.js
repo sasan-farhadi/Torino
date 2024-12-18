@@ -1,16 +1,15 @@
 "use client"
 
 import TorSalePage from "@/components/template/TorSale"
-import { useGetBasketId } from "@/core/services/mutations"
+import { useGetTourId } from "@/core/services/queries"
 
 const Sale = ({ params }) => {
     const id = params.saleId
-    const { data, mutate } = useGetBasketId(id)
-
+    const { data: torData } = useGetTourId(id)
 
     return (
         <div>
-            <TorSalePage data={data} mutate={mutate} />
+            <TorSalePage torData={torData} />
         </div>
     )
 }

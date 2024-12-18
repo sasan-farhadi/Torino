@@ -27,15 +27,23 @@ const PersonalEditForm = ({ setShowEditPersonal }) => {
     }
 
     const editHandler = () => {
-        if (!gender) return toast.error("جنسیت را انتخاب کنید")
-        if (nationalCode.length > 10) return toast.error("کد ملی اشتباه است")
-        mutate({ firstName, nationalCode, birthDate, gender })
-        if (data) {
-            toast.success("ویرایش با موفقیت انجام شد")
-        }
-        setShowEditPersonal(false)
-        location.reload()
-    }
+        if (!gender) return toast.error("جنسیت را انتخاب کنید");
+        if (nationalCode.length > 10) return toast.error("کد ملی اشتباه است");
+
+        mutate(
+            { firstName, nationalCode, birthDate, gender },
+            {
+                onSuccess: () => {
+                    toast.success("ویرایش با موفقیت انجام شد");
+                    setShowEditPersonal(false);
+                },
+                onError: (error) => {
+                    toast.error(`خطا : ${error.message}`);
+                },
+            }
+        );
+    };
+
 
     return (
         <>
