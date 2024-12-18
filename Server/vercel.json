@@ -2,42 +2,14 @@
     "version": 2,
     "builds": [
         {
-            "src": "app.js",
+            "src": "./app.js",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
-            "src": "/api/auth/(.*)",
-            "dest": "/server/routes/auth.js"
-        },
-        {
-            "src": "/api/basket/(.*)",
-            "dest": "/server/routes/basket.js"
-        },
-        {
-            "src": "/api/dev/(.*)",
-            "dest": "/server/routes/dev.js"
-        },
-        {
-            "src": "/api/order/(.*)",
-            "dest": "/server/routes/order.js"
-        },
-        {
-            "src": "/api/tour/(.*)",
-            "dest": "/server/routes/tour.js"
-        },
-        {
-            "src": "/api/user/(.*)",
-            "dest": "/server/routes/user.js"
-        },
-        {
-            "src": "/public/images/(.*)",
-            "dest": "/public/images/$1"
-        },
-        {
             "src": "/(.*)",
-            "dest": "/"
+            "dest": "/app.js"
         }
     ]
 }
