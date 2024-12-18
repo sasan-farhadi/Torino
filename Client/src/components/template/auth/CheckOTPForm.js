@@ -14,7 +14,7 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
     const [code, setCode] = useState("");
     const { isPending: isPendingCheck, mutate: checkOtpMutate } = useCheckOtp();
     const { isPending: isPendingSend, mutate: sendOtpMutate } = useSendOtp();
-    const [counter, setCounter] = useState(60);
+    const [counter, setCounter] = useState(30);
 
     useEffect(() => {
         if (counter > 0) {
@@ -52,7 +52,7 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
             {
                 onSuccess: (data) => {
                     toast.success(data?.data?.message);
-                    setCounter(60);
+                    setCounter(30);
                 },
                 onError: (error) => {
                     toast.error(error.message);
