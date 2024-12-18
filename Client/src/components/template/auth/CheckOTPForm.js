@@ -8,6 +8,7 @@ import { setCookie } from "@/core/utils/cookie";
 import toast from "react-hot-toast";
 import { useGetUserData } from "@/core/services/queries";
 import Loader from "@/components/module/Loader";
+import { e2p } from "@/core/utils/number";
 
 function CheckOTPForm({ mobile, setStep, setIsOpen }) {
     const { refetch } = useGetUserData()
@@ -69,7 +70,7 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
         <div className={styles.container}>
             <h4>کد تایید را وارد کنید.</h4>
             <form onSubmit={checkOtpHandler} className={styles.form} >
-                <label>کد تایید به شماره موبایل {mobile} ارسال شد</label>
+                <label>کد تایید به شماره موبایل {e2p(mobile)} ارسال شد</label>
                 <div style={{ direction: "ltr" }}>
                     <OtpInput
                         value={code}

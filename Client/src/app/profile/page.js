@@ -1,4 +1,4 @@
-const { default: ProfilePage } = require("@/components/template/ProfilePage")
+import ProfilePage from "@/components/template/ProfilePage"
 
 const Profile = () => {
     return (
