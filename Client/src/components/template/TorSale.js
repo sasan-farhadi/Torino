@@ -9,11 +9,12 @@ import { useState } from "react"
 import { dateCalc } from "@/core/utils/jalaliDate"
 import toast from "react-hot-toast"
 import { usePostOrder } from "@/core/services/mutations"
+import { useRouter } from "next/navigation"
 
 const TorSalePage = ({ torData }) => {
     const [form, setForm] = useState({ fullName: "", nationalCode: "", birthDate: "", gender: "male" })
     const res = dateCalc(torData?.startDate, torData?.endDate)
-
+    const router = useRouter()
     const { mutate } = usePostOrder()
 
     const dateHandler = (e) => {
@@ -33,6 +34,7 @@ const TorSalePage = ({ torData }) => {
         mutate(form, {
             onSuccess: () => {
                 toast.success("تور با موفقیت خریداری شد");
+                router.push("/profile/mytor")
             },
             onError: (error) => {
                 if (error.message === "Access token required") {

@@ -6,7 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 const LayoutProfile = ({ children }) => {
-    const [active, setActive] = useState("پروفایل")
+    const [active, setActive] = useState("")
     return (
         <div className={styles.container}>
             <div className={styles.main}>

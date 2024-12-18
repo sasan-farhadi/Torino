@@ -20,23 +20,114 @@
     background: transparent;
     width: auto;
     height: auto;
-    transform: translate(30%, 35%);
-    transition: transform 10s;
+    transform: translate(0%, 0%);
+    -webkit-animation: flyAround 20s infinite linear;
+    -moz-animation: flyAround 20s infinite linear;
+    -o-animation: flyAround 20s infinite linear;
+    animation: flyAround 20s infinite linear;
 }
 
-.banner:hover .airplan {
-    -webkit-animation: flyAway 12s forwards;
-    -moz-animation: flyAway 12s forwards;
-    -o-animation: flyAway 12s forwards;
-    animation: flyAway 12s forwards;
-}
+@-webkit-keyframes flyAround {
+    0% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
 
+    98% {
+        transform: translate(100vw, -50%);
+        opacity: 1;
+    }
 
-@keyframes flyAway {
-    to {
-        transform: translate(800%, -120%);
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0vw, -50%);
+    }
+
+    0.01% {
+        opacity: 1;
     }
 }
+
+@-moz-keyframes flyAround {
+    0% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+
+    98% {
+        transform: translate(100vw, -50%);
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0vw, -50%);
+    }
+
+    0.01% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes flyAround {
+    0% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+
+    98% {
+        transform: translate(100vw, -50%);
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0vw, -50%);
+    }
+
+    0.01% {
+        opacity: 1;
+    }
+}
+
+@keyframes flyAround {
+    0% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+
+    98% {
+        transform: translate(100vw, -50%);
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0vw, -50%);
+    }
+
+    0.01% {
+        opacity: 1;
+    }
+}
+
+
 
 
 @media (max-width : 480px) {

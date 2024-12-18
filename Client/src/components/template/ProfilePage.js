@@ -70,7 +70,7 @@ const ProfilePage = () => {
                             </div>
                             <div>
                                 <h4>جنسیت</h4>
-                                <p>{data?.data.gender === "male" ? "مرد" : "زن"}</p>
+                                <p>{data?.data.gender === "male" ? "مرد" : data?.data.gender === "female" ? "زن" : null}</p>
                             </div>
                             <div>
                                 <h4>تاریخ تولد</h4>

@@ -2,6 +2,7 @@ import styles from "@/components/template/MyTorPage.module.css"
 import Image from "next/image"
 import Loader from "../module/Loader"
 import { jalali } from "@/core/utils/jalaliDate"
+import { cityConvertE2P } from "@/core/utils/cityConvert"
 const MyTorPage = ({ data }) => {
     if (!data) return <Loader />
 
@@ -29,7 +30,7 @@ const MyTorPage = ({ data }) => {
                         <div className={styles.tor}>
                             <div>
 
-                                <h3>{x.origin["name"]} به {x.destination["name"]} ، </h3>
+                                <h3>{cityConvertE2P(x.origin["name"])} به {cityConvertE2P(x.destination["name"])} ، </h3>
                                 <h4>{jalali(x.startDate)}</h4>
                             </div>
                             <div>

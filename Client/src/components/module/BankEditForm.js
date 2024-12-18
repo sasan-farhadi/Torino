@@ -9,7 +9,12 @@ const BankEditForm = ({ setShowEditBank }) => {
     const { mutate } = useUpdateProfile()
     const { data: profiles } = useGetProfile()
 
-    const [form, setForm] = useState({ shaba_code: profiles.data.shaba_code, debitCard_code: profiles.data.debitCard_code, accountIdentifier: profiles.data.accountIdentifier })
+    const [form, setForm] = useState({
+        shaba_code: profiles.data.shaba_code || "",
+        debitCard_code: profiles.data.debitCard_code || "",
+        accountIdentifier: profiles.data.accountIdentifier || ""
+    })
+
 
     const changeHandler = (e) => {
         const { name, value } = e.target
@@ -24,6 +29,7 @@ const BankEditForm = ({ setShowEditBank }) => {
                 if (data?.message) {
                     toast.success("تغییرات با موفقیت انجام شد");
                     setShowEditBank(false);
+                    location.reload()
                 }
             },
             onError: (error) => {

@@ -3,6 +3,7 @@
 import styles from "@/components/module/EmailConfirmInput.module.css"
 import { useUpdateProfile } from "@/core/services/mutations"
 import { useGetProfile } from "@/core/services/queries"
+import { isValidEmail } from "@/core/utils/validation"
 
 import { useState } from "react"
 import toast from "react-hot-toast"
@@ -14,12 +15,14 @@ const EmailConfirmInput = ({ setShowEditEmail }) => {
     const { mutate } = useUpdateProfile();
 
     const editHandler = () => {
+        if (!isValidEmail(email)) return toast.error("فرمت ایمیل را به درستی وارد کنید")
         mutate(
             { email },
             {
                 onSuccess: () => {
                     setShowEditEmail(false);
                     toast.success("ایمیل با موفقیت ثبت شد")
+                    location.reload()
                 },
                 onError: (error) => {
                     toast.error("خطا :", error.message);
@@ -51,3 +54,5 @@ const EmailConfirmInput = ({ setShowEditEmail }) => {
 }
 
 export default EmailConfirmInput
+
+

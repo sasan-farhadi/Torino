@@ -27,7 +27,6 @@ const useGetTourId = (id) => {
     return useQuery({ queryFn, queryKey });
 };
 
-
 const useGetProfile = () => {
     const queryFn = () => api.get("/user/profile")
     const queryKey = ["get-profile"]
