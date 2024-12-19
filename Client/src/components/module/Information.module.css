@@ -154,7 +154,7 @@
 
 @media (min-width : 391px) and (max-width:480px) {
     .container {
-        width: 480px;
+        width: 390px;
     }
 
     .banner_info p {
@@ -162,7 +162,7 @@
     }
 
     .banner_info {
-        width: 387px;
+        width: 327px;
         height: 128px;
         padding: 20px 10px;
         border-top-left-radius: 10px;
@@ -172,7 +172,7 @@
     .phone_info {
         position: relative;
         display: flex;
-        width: 385px;
+        width: 325px;
         gap: 30px;
         border: 1px solid #00000040;
         border-bottom-left-radius: 10px;
@@ -182,7 +182,7 @@
     .information {
         display: flex;
         align-items: center;
-        width: 480px;
+        width: 390px;
         flex-direction: column;
         border: none;
     }
