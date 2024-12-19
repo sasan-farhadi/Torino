@@ -8,16 +8,16 @@
     ],
     "routes": [
       {
-        "src": "/(.*)",
-        "dest": "/server/app.js"
-      },
-      {
-        "src": "/public/(.*)",
+        "src": "/static/(.*)",
         "dest": "/server/public/$1"
       },
       {
-        "src": "/swagger",
-        "dest": "/server/swagger.json"
+        "src": "/api-docs",
+        "dest": "/server/api-docs"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/server/app.js"
       }
     ]
   }
