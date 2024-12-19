@@ -2,18 +2,22 @@
 
 import styles from "@/components/layout/Header.module.css"
 import Image from "next/image"
+import { SlBasket } from "react-icons/sl";
+
 import Link from "next/link"
 import { useState } from "react"
 import HambergerMenu from "../module/HambergerMenu"
 import AuthForm from "../template/auth"
 import { logoutHandler } from "@/core/utils/cookie"
-import { useGetUserData } from "@/core/services/queries"
+import { useGetBasket, useGetUserData } from "@/core/services/queries"
 
 const Header = () => {
 
     const [show, setShow] = useState("none")
     const [showHamberger, setShowHamberger] = useState("none")
     const { data } = useGetUserData()
+    const { data: basket } = useGetBasket()
+
     return (
         <header className={styles.header}>
             <div onClick={() => setShowHamberger("none")} style={{ display: showHamberger }}>
@@ -49,7 +53,12 @@ const Header = () => {
                             ) : (
                                 <>
                                     <div className={styles.menuprofile} onClick={() => setShow("block")} onMouseLeave={() => setShow("none")}  >
-                                        <Image alt="image" src="/images/user-icon.png" width={1000} height={800} />
+                                        {
+                                            basket ? (<span> 1 </span>) : null
+                                        }
+                                        {
+                                            !basket ? (<Image alt="image" src="/images/user-icon.png" width={1000} height={800} />) : null
+                                        }
                                         <p> {data?.data.mobile} </p>
                                         <Image alt="image" src="/images/arrow-down.png" width={1000} height={800} />
                                         <div className={styles.showprofile} style={{ display: show }}>
@@ -60,6 +69,15 @@ const Header = () => {
                                                     </div>
                                                     <p>  {data?.data.mobile} </p>
                                                 </li>
+                                                {basket &&
+                                                    <li className={styles.basket}>
+                                                        <SlBasket size={28} color="red" />
+                                                        <Link href={`/tor/sale/${basket?.data.id}`}>
+                                                            سبد خرید
+                                                        </Link>
+                                                        <span> 1 </span>
+                                                    </li>
+                                                }
                                                 <li>
                                                     <Image alt="image" src="/images/user-icon3.png" width={1000} height={800} />
                                                     <Link href="/profile"><p> اطلاعات حساب کاربری </p></Link>

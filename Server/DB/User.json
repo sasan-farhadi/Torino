@@ -1,36 +1,8 @@
 [
   {
-    "id": "e8581157-5963-45b8-ad79-a341f03bd916",
+    "id": "43d544c4-a524-4ab9-acdc-43e1e79a4c04",
     "mobile": "09171234567",
-    "otpExpires": 1734554723303,
-    "otpCode": "833104",
-    "email": "a@sss.com",
-    "firstName": "ساسان",
-    "nationalCode": "1234567890",
-    "birthDate": {
-      "date": "1988-12-12T19:16:37.733Z"
-    },
-    "gender": "male",
-    "shaba_code": "11111111111",
-    "debitCard_code": "123456789",
-    "accountIdentifier": "987654321"
-  },
-  {
-    "id": "98349290-0129-4130-a224-84a7043441d7",
-    "mobile": "09352923562",
-    "otpExpires": 1734553120495,
-    "otpCode": "561534"
-  },
-  {
-    "id": "0a5bbccf-c9e6-4087-b9c7-940b9e36069b",
-    "mobile": "09179212443",
-    "otpExpires": 1734554676796,
-    "otpCode": "561979"
-  },
-  {
-    "id": "88148039-96e2-496f-b9fa-0cca30539f3f",
-    "mobile": "09173213562",
-    "otpExpires": 1734554507698,
-    "otpCode": "511383"
+    "otpExpires": 1734626258307,
+    "otpCode": "385118"
   }
 ]

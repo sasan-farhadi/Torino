@@ -86,6 +86,13 @@
     font-size: 1.2rem;
 }
 
+.menuprofile>span {
+    background-color: red;
+    border-radius: 50%;
+    padding: 0 10px 0 10px;
+    color: #fff;
+}
+
 .showprofile {
     display: none;
     top: 35px;
@@ -169,6 +176,21 @@
     display: none;
 }
 
+.basket {
+    color: red;
+}
+
+.basket span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 50%;
+    padding: 0 10px 0 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
 
 @media (max-width:480px) {
     .container {
@@ -187,11 +209,12 @@
     .signin {
         display: none;
     }
-    
+
     .login {
         display: block;
         margin-right: 30px;
     }
+
     .menu {
         gap: 230px;
     }
@@ -228,11 +251,12 @@
     .signin {
         display: none;
     }
-    
+
     .login {
         display: block;
         margin-right: 30px;
     }
+
     .menu {
         gap: 230px;
     }
