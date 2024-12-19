@@ -118,21 +118,21 @@
     }
 
     .footer {
-        width: 480px;
+        width: 390px;
         flex-wrap: wrap;
         padding: 15px 15px;
     }
 
     .about {
-        width: 220px;
+        width: 180px;
     }
 
     .customer {
-        width: 220px;
+        width: 180px;
     }
 
     .certificate {
-        width: 480px;
+        width: 390px;
         display: flex;
         padding: 0 0 0 15px;
         text-align: center;
@@ -141,7 +141,7 @@
     
     .contact {
         width: 50%;
-        padding: 39px 0 0 20px;
+        padding: 39px 0 0 0;
     }
     
     .certificate_icon {
