@@ -1,30 +1,9 @@
 [
   {
-    "id": "46c403a5-f4d9-4356-979a-fac965dba9da",
+    "id": "cefef3f2-9829-4af6-920a-98b12f0f0334",
     "userId": "43d544c4-a524-4ab9-acdc-43e1e79a4c04",
     "amount": 35000,
     "type": "Purchase",
-    "createdAt": "2024-12-19T16:32:18.731Z"
-  },
-  {
-    "id": "1e91c8c3-03b9-4932-8bf0-c8559b8be81c",
-    "userId": "43d544c4-a524-4ab9-acdc-43e1e79a4c04",
-    "amount": 185000,
-    "type": "Purchase",
-    "createdAt": "2024-12-19T16:33:44.966Z"
-  },
-  {
-    "id": "db5480ae-b83e-46b5-970a-4059ded0509f",
-    "userId": "43d544c4-a524-4ab9-acdc-43e1e79a4c04",
-    "amount": 105000,
-    "type": "Purchase",
-    "createdAt": "2024-12-19T16:58:19.533Z"
-  },
-  {
-    "id": "77dd53f7-5418-416f-ab36-4cfeed5fd6a3",
-    "userId": "43d544c4-a524-4ab9-acdc-43e1e79a4c04",
-    "amount": 35000,
-    "type": "Purchase",
-    "createdAt": "2024-12-19T17:11:57.785Z"
+    "createdAt": "2024-12-19T17:41:43.046Z"
   }
 ]

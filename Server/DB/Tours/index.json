@@ -61,7 +61,7 @@
     "title": "سلیمانیه",
     "fleetVehicle": "SUV",
     "price": 35000,
-    "availableSeats": 35,
+    "availableSeats": 34,
     "insurance": true,
     "options": [
       "نهار و صبحانه",
@@ -153,7 +153,7 @@
     "title": "تور ایتالیا",
     "fleetVehicle": "Airplane",
     "price": 18000,
-    "availableSeats": 20,
+    "availableSeats": 19,
     "insurance": true,
     "options": [
       "نهار و صبحانه",
