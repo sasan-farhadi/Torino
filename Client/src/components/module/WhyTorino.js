@@ -1,7 +1,30 @@
 import styles from "@/components/module/WhyTorino.module.css"
 import Image from "next/image"
+import { useState } from "react";
 
 const WhyTorino = () => {
+    const [imageClasses, setImageClasses] = useState([
+        styles.firstImage,
+        styles.secondImage,
+        styles.thirdImage,
+        styles.fourthImage
+    ]);
+
+    const handleNext = () => {
+        setImageClasses(prevClasses => {
+            const newClasses = [...prevClasses];
+            newClasses.unshift(newClasses.pop());
+            return newClasses;
+        });
+    };
+
+    const handlePrev = () => {
+        setImageClasses(prevClasses => {
+            const newClasses = [...prevClasses];
+            newClasses.push(newClasses.shift());
+            return newClasses;
+        });
+    };
     return (
         <>
             <div className={styles.container}>
@@ -28,15 +51,35 @@ const WhyTorino = () => {
                         </div>
                     </div>
                     <div className={styles.slide_image}>
-                        <Image src="/images/slide1.png" alt="slide1" width={1000} height={800} />
-                        <Image src="/images/slide2.png" alt="slide2" width={1000} height={800} />
-                        <Image src="/images/slide3.png" alt="slide3" width={1000} height={800} />
-                        <Image src="/images/slide4.png" alt="slide4" width={1000} height={800} />
+                        {imageClasses.map((className, index) => (
+                            <Image
+                                key={index}
+                                src={`/images/slide${index + 1}.png`}
+                                alt={`slide${index + 1}`}
+                                width={1000}
+                                height={800}
+                                className={className}
+                            />
+                        ))}
                     </div>
                     <div className={styles.next_prev}>
-                        <Image src="/images/arrow-right.png" width={1000} height={800} alt="arrow-right" />
-                        <p>1/4</p>
-                        <Image src="/images/arrow-left.png" width={1000} height={800} alt="arrow-left" />
+                        <Image
+                            src="/images/arrow-right.png"
+                            width={36}
+                            height={36}
+                            alt="arrow-right"
+                            onClick={handlePrev}
+                            className={styles.arrow}
+                        />
+                        <p>{`${imageClasses.indexOf(styles.firstImage) + 1}/4`}</p>
+                        <Image
+                            src="/images/arrow-left.png"
+                            width={36}
+                            height={36}
+                            alt="arrow-left"
+                            onClick={handleNext}
+                            className={styles.arrow}
+                        />
                     </div>
                 </div >
             </div>
@@ -46,3 +89,73 @@ const WhyTorino = () => {
 }
 
 export default WhyTorino
+
+
+
+
+// import styles from "@/components/module/WhyTorino.module.css";
+// import Image from "next/image";
+// import { useState } from "react";
+
+// const WhyTorino = () => {
+//     const [imageClasses, setImageClasses] = useState([
+//         styles.firstImage,
+//         styles.secondImage,
+//         styles.thirdImage,
+//         styles.fourthImage
+//     ]);
+
+//     const handleNext = () => {
+//         setImageClasses(prevClasses => {
+//             const newClasses = [...prevClasses];
+//             newClasses.unshift(newClasses.pop());
+//             return newClasses;
+//         });
+//     };
+
+//     const handlePrev = () => {
+//         setImageClasses(prevClasses => {
+//             const newClasses = [...prevClasses];
+//             newClasses.push(newClasses.shift());
+//             return newClasses;
+//         });
+//     };
+
+//     return (
+//         <>
+//             <div className={styles.slide_image}>
+//                 {imageClasses.map((className, index) => (
+//                     <Image
+//                         key={index}
+//                         src={`/images/slide${index + 1}.png`}
+//                         alt={`slide${index + 1}`}
+//                         width={1000}
+//                         height={800}
+//                         className={className}
+//                     />
+//                 ))}
+//             </div>
+//             <div className={styles.next_prev}>
+//                 <Image
+//                     src="/images/arrow-right.png"
+//                     width={36}
+//                     height={36}
+//                     alt="arrow-right"
+//                     onClick={handlePrev}
+//                     className={styles.arrow}
+//                 />
+//                 <p>{`${imageClasses.indexOf(styles.firstImage) + 1}/4`}</p>
+//                 <Image
+//                     src="/images/arrow-left.png"
+//                     width={36}
+//                     height={36}
+//                     alt="arrow-left"
+//                     onClick={handleNext}
+//                     className={styles.arrow}
+//                 />
+//             </div>
+//         </>
+//     );
+// };
+
+// export default WhyTorino;
