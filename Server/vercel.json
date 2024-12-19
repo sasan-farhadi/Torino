@@ -1,15 +1,27 @@
 {
     "version": 2,
     "builds": [
-        {
-            "src": "./app.js",
-            "use": "@vercel/node"
-        }
+      {
+        "src": "server/app.js",
+        "use": "@vercel/node"
+      }
     ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/app.js"
-        }
-    ]
-}
+      {
+        "src": "/api/(.*)",
+        "dest": "/server/$1"
+      },
+      {
+        "src": "/public/(.*)",
+        "dest": "/server/public/$1"
+      },
+      {
+        "src": "/swagger",
+        "dest": "/server/swagger.json"
+      }
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
+  
