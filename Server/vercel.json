@@ -8,8 +8,8 @@
     ],
     "routes": [
       {
-        "src": "/api/(.*)",
-        "dest": "/server/$1"
+        "src": "/(.*)",
+        "dest": "/server/app.js"
       },
       {
         "src": "/public/(.*)",
@@ -19,9 +19,6 @@
         "src": "/swagger",
         "dest": "/server/swagger.json"
       }
-    ],
-    "env": {
-      "NODE_ENV": "production"
-    }
+    ]
   }
   
