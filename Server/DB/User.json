@@ -2,7 +2,17 @@
   {
     "id": "43d544c4-a524-4ab9-acdc-43e1e79a4c04",
     "mobile": "09171234567",
-    "otpExpires": 1734626258307,
-    "otpCode": "385118"
+    "otpExpires": 1734626516772,
+    "otpCode": "712296",
+    "email": "sasan@gmail.com",
+    "firstName": "ساسان",
+    "nationalCode": "1234567890",
+    "birthDate": {
+      "date": "2024-12-09T17:12:44.752Z"
+    },
+    "gender": "male",
+    "shaba_code": "12345678900",
+    "debitCard_code": "12345678900",
+    "accountIdentifier": "98765432100"
   }
 ]

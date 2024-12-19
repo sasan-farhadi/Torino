@@ -86,7 +86,7 @@
 }
 
 
-@media (min-width : 391px) and (max-width:480px) {
+@media (max-width : 390px) {
     .container {
         width: 390px;
     }
@@ -152,7 +152,7 @@
 
 
 
-@media (width : 480px) {
+@media (min-width : 391px) and (max-width:480px) {
     .container {
         width: 480px;
     }

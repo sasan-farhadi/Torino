@@ -35,6 +35,7 @@ const TorSalePage = ({ torData }) => {
             onSuccess: () => {
                 toast.success("تور با موفقیت خریداری شد");
                 router.push("/profile/mytor")
+                router.refresh()
             },
             onError: (error) => {
                 if (error.message === "Access token required") {

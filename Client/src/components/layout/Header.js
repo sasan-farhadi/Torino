@@ -5,18 +5,26 @@ import Image from "next/image"
 import { SlBasket } from "react-icons/sl";
 
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import HambergerMenu from "../module/HambergerMenu"
 import AuthForm from "../template/auth"
 import { logoutHandler } from "@/core/utils/cookie"
 import { useGetBasket, useGetUserData } from "@/core/services/queries"
 
 const Header = () => {
-
+    const { data: basket } = useGetBasket()
+    const [isBasket, setIsBasket] = useState(false)
     const [show, setShow] = useState("none")
     const [showHamberger, setShowHamberger] = useState("none")
     const { data } = useGetUserData()
-    const { data: basket } = useGetBasket()
+
+    useEffect(() => {
+        if (basket) {
+            setIsBasket(true)
+        } else {
+            setIsBasket(false)
+        }
+    }, [basket])
 
     return (
         <header className={styles.header}>
@@ -54,10 +62,10 @@ const Header = () => {
                                 <>
                                     <div className={styles.menuprofile} onClick={() => setShow("block")} onMouseLeave={() => setShow("none")}  >
                                         {
-                                            basket ? (<span> 1 </span>) : null
+                                            isBasket ? (<span> 1 </span>) : null
                                         }
                                         {
-                                            !basket ? (<Image alt="image" src="/images/user-icon.png" width={1000} height={800} />) : null
+                                            !isBasket ? (<Image alt="image" src="/images/user-icon.png" width={1000} height={800} />) : null
                                         }
                                         <p> {data?.data.mobile} </p>
                                         <Image alt="image" src="/images/arrow-down.png" width={1000} height={800} />
